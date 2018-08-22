@@ -4,7 +4,7 @@
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
 ##### Office: 403 Evans Hall. Office hours: TBA
 
-##### This version: 16 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
+##### This version: 21 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
@@ -28,16 +28,29 @@ There will not be a final exam, but there will be final presentations of group w
 + Willingness to pick up programming languages and software tools independently 
 (tools used will include 
 Python; Jupyter Notebooks; the Python "scientific stack" of
-numpy, scipy, matplotlib, and perhaps pandas and scikit; git; GitHub; Travis CI; LaTeX,
+numpy, scipy, matplotlib, and perhaps pandas and scikit; git; GitHub; Travis CI; 
+Docker; LaTeX,
 Markdown, pandoc)
 
 ### Format and assessment
-+ 3 hours of lecture per week
-+ written assignments (40% of grade)
-+ term projects (60% of grade) 
++ 3 hours of lecture and 2 hours of lab per week
++ approximately 5 "small" individual assignments (40% of grade)
++ 2 larger projects (30% of grade) 
++ a group term project (30% of grade)
+
+### Office hours
++ Mondays 12:15-1:15, 403 Evans Hall
+
+### Graduate Student Instructor
++ Mitch Negus, mitchell_negus@b.e
++ Office hours TBA
+
 
 _Submitting assignments:_ Written assignments will be submitted using pull requests; details
-to follow.
+to come.
+
++ Text documents should be written in LaTeX or Markdown. A pdf and the source file should be submitted. Microsoft Word is not acceptable.
++ Code and analyses should be in python. All code should have accompanying unit tests. In some cases, Jupyter notebooks will be the appropriate thing to submit; in others (more extensive analyses), a collection of .py files will be more appropriate. For term projects, the "deliverable" will include a repository that includes code, data, analyses, unit tests, and coverage tests.
 
 
 ### Code of conduct; attribution of work
@@ -68,48 +81,51 @@ instructor as soon as possible.
 If you are not currently listed with DSP (the Disabled Students' Program) and believe you might 
 benefit from their support, please apply online at dsp.berkeley.edu
 
-## Main topics by week 
+## Resources
+
++ Git and git workflows
+    - [Introduction to Git](https://github.com/berkeley-scf/tutorial-git-basics/blob/master/git-intro.md). This is based on the notes we used in this class, but has a fair amount of additional explanation and detail you may find useful through the semester.
+    - [Immersion course](http://gitimmersion.com)
+    - [git-scm guide](https://book.git-scm.com)
+    - [Statlab development git workflow](http://statlab.github.io/permute/dev/index.html)
+    
++ Continuous integration
+    - [Travis CI for beginners](https://docs.travis-ci.com/user/for-beginners/)
+    - [Continuous integration with Travis](http://www.vogella.com/tutorials/TravisCi/article.html) by Simon Scholz
+    
++ Scientific Python, Jupyter
+    - [Lecture notes on scientific python](https://www.scipy-lectures.org/intro/)
+    - [Python for scientific computing](http://fperez.org/py4science/) by Fernando Perez
+    - https://hplgit.github.io/primer.html/doc/pub/half/book.pdf
+    - [Elegant SciPy](http://proquest.safaribooksonline.com/9781491922927), [Stefan van der Walt](https://bids.berkeley.edu/people/st%C3%A9fan-van-der-walt). The [full book](https://github.com/elegant-scipy/elegant-scipy) and all the [notebooks](https://github.com/elegant-scipy/notebooks) are available.
+    - [Getting started with Python for research](https://github.com/TiesdeKok/LearnPythonforResearch), a gentle introduction to Python in data-intensive research.
+    - [An introduction to "Data Science"](https://github.com/stefanv/ds_intro), a collection of Notebooks by BIDS' [Stéfan Van der Walt](https://bids.berkeley.edu/people/st%C3%A9fan-van-der-walt).
+    - [Effective Computation in Physics](http://proquest.safaribooksonline.com/book/physics/9781491901564), by Kathryn D. Huff; Anthony Scopatz. [Notebooks to accompany the book](https://github.com/physics-codes/seminar).
+    - [A Whirlwind Tour of Python](https://jakevdp.github.io/WhirlwindTourOfPython/index.html), by Jake VanderPlas.
+    - [Python for Data Analysis, 2nd Edition](http://proquest.safaribooksonline.com/book/programming/python/9781491957653), by  Wes McKinney, creator of Pandas. [Companion Notebooks](https://github.com/wesm/pydata-book)
+    - [Effective Pandas](https://github.com/TomAugspurger/effective-pandas), a book by Tom Augspurger, core Pandas developer.
+
++ Docker
+    - to come...
+
++ LaTeX
+    - to come
+
++ Markdown
+    - https://daringfireball.net/projects/markdown/syntax
+    - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+    - https://www.markdownguide.org/getting-started/
+    
++ Pandoc
+    - 
+    
++ General computing tutorials
+    - [Berkeley Statistical Computing Facility tutorials](http://statistics.berkeley.edu/computing/training/tutorials)
+
+
+## Topics by week 
 
 ### Week 1
-
-#### Reading for discussion
-
-1. [J.B. Buckheit and D.L. Donoho, 1995. Wavelab and Reproducible Research](https://statweb.stanford.edu/~wavelab/Wavelab_850/wavelab.pdf)
-
-1. Freedman, D.A., and R. Berk, 2001. Statistical Assumptions as Empirical Commitments,  
-http://escholarship.org/uc/item/0zj8s368#page-1
-(also in Freedman, D.A., 2010. _Statistical Models and Causal Inference: A dialog with the Social Sciences_,
-Cambridge University Press. D. Collier, J. Sekhon, P.B. Stark, eds.)
-
-1. Klemes, V., 1989. The Improbable Probabilities of Extreme Floods and Droughts, in O. Starosolsky and O.M. Meldev (eds), _Hydrology and Disasters_, James and James, London, 43--51.  
-https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OCR.pdf
-
-1. Morabia, A., 2006. Pierre-Charles-Alexandre Louis and the evaluation of bloodletting, 
-_J. Roy. Soc. Medicine_, _99_, 158--160. 
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1383766/pdf/0158.pdf
-
-1. https://digest.bps.org.uk/2017/06/20/5-reasons-its-so-hard-to-think-like-a-scientist/
-https://www.sciencedirect.com/science/article/pii/S0079742116300214
-
-1. Stark, P.B., and Saltelli, A., 2018. Cargo-Cult Statistics and Scientific Crisis,
-_Significance_, https://www.significancemagazine.com/593
-
-1. Stark, P.B., 2018. No Reproducibility Without Preproducibility, _Nature_, _557_, p613.
-https://www.nature.com/magazine-assets/d41586-018-05256-0/d41586-018-05256-0.pdf 
-doi: 10.1038/d41586-018-05256-0
-
-1. Stark, P.B., 2017. [Preface](https://www.practicereproducibleresearch.org/core-chapters/0-preface.html) to 
-_The Practice of Reproducible Research_, Justin Kitzes, Daniel Turek, Fatma Deniz, eds.,
-University of California Press, Berkeley
-
-1. Stark, P.B. and D.A. Freedman, 2003. What is the Chance of an Earthquake? in
-_Earthquake Science and Seismic Risk Reduction_, F. Mulargia and R.J. Geller, eds.,
-NATO Science Series IV: Earth and Environmental Sciences, v. 32, Kluwer, Dordrecht, The Netherlands, 201–213.  
-Preprint:  
-http://www.stat.berkeley.edu/~stark/Preprints/611.pdf
-
-1. Stark, P.B., 2016a. 
-[Pay no attention to the model behind the curtain](https://www.stat.berkeley.edu/~stark/Preprints/eucCurtain15.pdf)
 
 #### Topics
 
@@ -135,7 +151,10 @@ http://www.stat.berkeley.edu/~stark/Preprints/611.pdf
         + pre-processing, cleaning, etc.
     - analysis
         + figure out what they claim to have done
-        + figure out what they did
+        + figure out what they did 
+            - usually impossible from just the methods section
+            - much harder if the analysis was not scripted
+            - might be impossible even with their code
         + figure out what they should have done
         + compare
 
@@ -150,10 +169,10 @@ http://www.stat.berkeley.edu/~stark/Preprints/611.pdf
     - Cargo-cult science and statistics
 
 + Papers/Datasets for the term
-    - chose papers where there seemed to be a chance to get the data
-    - chose topics with social impact: food, health, 
-    - chose some paper I think are bogus
-    - chose some papers whose conclusions I like---to avoid confirmation bias
+    - papers where there seemed to be a chance to get the data
+    - topics with social impact: food, health, 
+    - some paper I think are bogus
+    - some papers whose conclusions I like--scrutiny to avoid confirmation bias
 
 + Software engineering
     - revision/version control
@@ -173,9 +192,18 @@ http://www.stat.berkeley.edu/~stark/Preprints/611.pdf
     - automation
     - accountability
 
-#### Assignment
-1. **To hand in:** Look at 
-[the data Morabia transcribed from P.C.A. Louis on bloodletting for pneumonia](http://www.epidemiology.ch/history/louis.htm). 
+#### Assignment **Due 9/3, 11:59pm:** 
+1. Look at 
+[the data Morabia transcribed from P.C.A. Louis on bloodletting for pneumonia](http://www.epidemiology.ch/history/louis.htm) and read Morabia (2006). What do you think of the fact that data from 1828 are available?
+Reproduce the results Morabia cites:
+
+- 77 patients
+- 2 comparison groups of 41 and 36 patients
+- comparable average age (41 and 38 years, respectively)
+- number of patients bled on the first day, who had passed the age of fifty, was nearly twice as great as that of the patients of the same age, who were bled at a later period
+- duration of disease was an average of 3 days shorter in those who had been bled early compared with those who had been bled late
+- `three sevenths' (i.e., 44 %) of the patients who had been bled early died 
+- `only one fourth' (i.e., 25 %) of those bled late died  
 Is Louis's work an observational study or an experiment? 
 Do you think it amounts to a "natural experiment"?
 Why or why not? 
@@ -183,215 +211,109 @@ Give two scientific questions (_statistical hypotheses_) those data might addres
 What do you think the most important confounding factors would be, for those two hypotheses? 
 What would be the most natural "as-if" randomization to use in analyzing 
 the data to address the hypotheses you formulated, if you were to consider 
-the data to be a natural experiment? 
+the study to be a natural experiment? 
 What are the controls? Is the experiment blind? Double-blind? 
 Explain how you might use the Neyman model to analyze the data. 
 Is the randomization assumption reasonable? 
 Why or why not? Is the non-interference assumption reasonable? Why or why not?
-Implement permutation tests (in R or Python) for the hypotheses about 
-bloodletting you formulated, using the data Morabia transcribed from Louis. 
-Discuss numerical issues in implementing the permutation tests. 
-What pseudo-random number generator did you use? How did you set the seed? 
-How did you choose the number of random permutations or random samples to generate? 
-How did you implement the procedure? (Is there a principle you might use to decide the number? 
-If so, what?) What test statistic(s) did you use? Why did you pick those? 
-How to they connect to the relevant alternative hypotheses? 
-Do you think the results would be qualitatively different if you had used a 
-different test statistic? 
-Discuss your findings, including any weaknesses in your framing of the problem 
-(the statistical assumptions) and in the numerical analysis. 
-Test each component of your code using a unit test. 
-Turn in your results and your code, including the unit tests of the code.
 
-#### Lecture topics
-+ reasoning and fallacies 
-(reading: [SticiGui: Reasoning and fallacies](http://www.stat.berkeley.edu/~stark/SticiGui/Text/reasoning.htm))
-+ observational studies and experiments 
-(reading: [SticiGui: Does Treatment Have an Effect?](http://www.stat.berkeley.edu/~stark/SticiGui/Text/experiments.htm))
-    - longitudinal and cross-sectional studies
-    - confounding
-    - controls
-    - historical controls
-    - randomization
-    - placebos and the placebo effect
-
-### Week 2
-
-#### Reading for discussion
-
-
-
-#### Assignment
-Find three examples of probabilities in the popular press this week relating to
-something scientific (not, for instance, sports).
-For each, give a citation, a brief synopsis of the issue/claim, and explain what "probability"
-means in the context of the article. 
-In particular, explain whether the probability results from actual randomization, from a truly
-stochastic phenomenon, or from a (metaphorical) model.
-Is it a reflection of data, of physics, of expert opinion, of modeling choices, or what?
-Try to assess whether the number is malleable: would different assumptions have led to
-different numbers?
-Or would it take different underlying data to yield different numbers?
-How "objective" is each probability?
-
-#### Lecture topics
-+ what does "probability" mean?
-(reading: [SticiGui: Probability: Philosophy and Mathematical Background](http://www.stat.berkeley.edu/~stark/SticiGui/Text/probabilityPhilosophy.htm);
-[Stark, P.B. and D.A. Freedman, 2003](http://www.stat.berkeley.edu/~stark/Preprints/611.pdf))
-+ the ontology of probability in science
-    - deliberate randomization (random samples, randomized experiments)
-    - stochastic phenomena (quantum physics, thermodynamics, "noise" processes)
-    - models / assumptions (mostly invented--based on metaphor)
-    - how do you justify a (stochastic) model?
-        + scientific basis ("truth")
-        + predictive power
-        + compact description of data (goodness of fit)
-        + other utility?
-    - case study: Schwarzenegger's acrostic veto
-    - case study: chance a couple has children born 8/8/08, 9/9/09, and 10/10/10
-    - case study: the chance of a major earthquake in the Bay Area by 2030
-+ surveys (reading: [SticiGui: Sampling](http://www.stat.berkeley.edu/~stark/SticiGui/Text/sampling.htm))
-    - common survey designs
-    - populations, frames, parameters, and statistics
-    - response rates, self-selection, nonresponse bias
-    - margin of error and confidence intervals
-        + meaningless unless the sample is random
-        + need to account for bias and nonresponse
-        + can't blindly plug into formula: have to account for the sample design
-    - priming, wording, etc.
-    - semi-attached figures and red herrings
-    - Internet surveys
-    - snowball samples, sampling social networks, etc.
-    - case studies:
-        + The Hite Report
-        + student evaluations of teaching
-
-### Week 3
-
-#### Reading for discussion
-
-
-#### Assignment
-Find an example of a margin of error or confidence interval
-for a survey and a claim of statistical significance
-(for any kind of study) in the popular press this week.
-For each, give a citation and brief synopsis of the issue/claim and the experiment or
-data source.
-Explain/interpret the margin of error, confidence interval, and the significance level 
-or p-value in plain
-language.
-Assess whether the uses of the margin of error, confidence interval
-or test of significance are appropriate.
-Was there a random sample? If so, what was the sample design? Was it a simple random sample?
-Stratified? Cluster? Multi-stage? What was the response rate? Did the authors give you enough
-information to evaluate the results?
-What is the null hypothesis for the test of significance? Is is realistic, or a "straw man"?
-Where does the probability "come from" in the confidence interval or
-test of significance? Was there a randomized
-experiment, a random sample, or something else?
-Can you tell what formulae were used to find the margin of error, confidence interval,
-or the p-value?
-Do they fit the way the data were collected, or are they mechanical calculations
-using irrelevant formulae?
-
-#### Lecture topics
-
-+ interpreting p-values; statistical significance and practical significance
-    - null and alternative hypotheses
-    - what are p-values, and why do people love to hate them?
-    - "straw-man" null hypotheses; parametric and nonparametric tests
-    - multiplicity, significance hunting. Voodoo correlation
-    - does it matter?
-    - are most scientific results wrong?
-    - reproducibility and replicability
-    - case study: banning p-values by _Basic and Applied Social Psychology_
-    - case study: telepathy over the Internet
-+ interpreting confidence intervals
-+ meta-analysis
-    - how many bad studies does it take to make a good study?
-    - underlying assumptions
-+ causal inference
-    - hypothetical counterfactuals
-    - importance of randomization and intervention
-    - association versus causation
-    - intention-to-treat analyses
-    - quantifying the effect of treatment
-    - generalizability
-    - are Big Data a substitute for randomization and experimental design?
-
-### Week 4
-
-#### Reading for discussion
-
-
-
-#### Assignment
-Work on your [term project](./project.pdf).
-
-#### Lecture topics
-
+1. Read Karp et al. (2015) and look at the data they provided in Data Dryad.
+Which figures and tables in the paper could, in principle, be reproduced from the data they provide?
+Which cannot?
+Does the methods section describe how they processed the data in adequate detail to
+reproduce the analyses? If not, what else would you need to know?
 
 
 ## Collected Reading List:
 
-1. Boring, A., K. Ottoboni, and P.B. Stark, 2016. Student evaluations of teaching (mostly) do not measure teaching effectiveness, _ScienceOpen Research_, DOI: 10.14293/S2199-1006.1.SOR-EDU.AETBZC.v1 https://www.scienceopen.com/document?vid=818d8ec0-5908-47d8-86b4-5dc38f04b23e
-1. Cornell, C.A., 1968. Engineering seismic risk analysis, _Bull. Seism. Soc. Am_, _58_, 1583--1606. 
+
+__Foundations; Statistical Models__
+
 1. Feynman, R., 1974. CalTech Commencement Address,  
 http://calteches.library.caltech.edu/51/2/CargoCult.htm
+
 1. Freedman, D.A., 1995. Some issues in the foundations of statistics, _Foundations of Science_, _1_, 19--39. https://doi.org/10.1007/BF00208723
+
 1. Freedman, D.A., 1999. From association to causation: some remarks on the history of statistics, _Statistical Science_, _14_(3), 243--258.
+
+1. Freedman, D.A., and R. Berk, 2001. Statistical Assumptions as Empirical Commitments,  
+http://escholarship.org/uc/item/0zj8s368#page-1
+(also in Freedman, D.A., 2010. _Statistical Models and Causal Inference: A dialog with the Social Sciences_, Cambridge University Press. D. Collier, J. Sekhon, P.B. Stark, eds.)
+
 1. Freedman, D.A., 2008. On types of scientific inquiry: the role of qualitative reasoning, _The Oxford Handbook of Political Methodology_, Box-Steffensmeier, J.M., H.E. Brady, and D. Collier (eds), Oxford University Press, Oxford. DOI: 10.1093/oxfordhb/9780199286546.003.0012. [Preprint](https://www.stat.berkeley.edu/~census/anomaly.pdf)
+
 1. Freedman, D.A., 2009. _Statistical Models: Theory and Practice_, 2nd edition, Cambridge University Press.
+
 1. Freedman, D.A., R. Pisani, and R. Purves, 2007. _Statistics, 4th edition_, W.W. Norton, New York.
+
 1. Klemes, V., 1989. The Improbable Probabilities of Extreme Floods and Droughts, in O. Starosolsky and O.M. Meldev (eds), _Hydrology and Disasters_, James and James, London, 43--51.  
 https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OCR.pdf
+
 1. LeCam, L., 1977.  Note on metastatistics or 'An essay toward stating a problem in the doctrine of chances,' _Synthese_, _36_, 133-160.
-1. Morabia, A., 2006. Pierre-Charles-Alexandre Louis and the evaluation of bloodletting, _J. Roy. Soc. Medicine_, _99_, 158--160. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1383766/pdf/0158.pdf
-1. Mulargia, F., P.B. Stark, and R.J. Geller, 2017. Why is probabilistic seismic hazard analysis (PSHA) still used? 
-1. Stark, P.B., and D.A. Freedman, 2003. What is the Chance of an Earthquake?, in _Earthquake Science and Seismic Risk Reduction_, F. Mulargia and R.J. Geller, eds., NATO Science Series IV: Earth and Environmental Sciences, v. 32, Kluwer, Dordrecht, The Netherlands, 201-213. https://www.stat.berkeley.edu/~stark/Preprints/611.pdf
-1. Stark, P.B., 1997. [SticiGui](https://www.stat.berkeley.edu/~stark/SticiGui/) Various chapters assigned below.
-1. Stark, P.B., 2015. Constraints versus priors. _SIAM/ASA Journal on Uncertainty Quantification_, _3_(1), 586--598. doi:10.1137/130920721,  
-Reprint: http://epubs.siam.org/doi/10.1137/130920721,  
-Preprint: https://www.stat.berkeley.edu/~stark/Preprints/constraintsPriors15.pdf.
-1. Stark, P.B., 2016a. [Pay no attention to the model behind the curtain](https://www.stat.berkeley.edu/~stark/Preprints/eucCurtain15.pdf)
+
+1. Stark, P.B., 1997. [SticiGui](https://www.stat.berkeley.edu/~stark/SticiGui/)
+
+1. Stark, P.B., 2016a. 
+[Pay no attention to the model behind the curtain](https://www.stat.berkeley.edu/~stark/Preprints/eucCurtain15.pdf)
+
 1. Stark, P.B., 2016b. The value of P-values, _The American Statistician_, _70_, DOI:10.1080/00031305.2016.1154108
+
 1. Stark, P.B., 2017. [Mathematical Foundations](https://github.com/pbstark/S157F17/blob/master/math-foundations.ipynb), [Inequalities](https://github.com/pbstark/S157F17/blob/master/math-inequalities.ipynb), [Introduction to permutation tests](https://github.com/pbstark/S157F17/blob/master/permute-intro.ipynb), [Rabbits and Cargo-Cult Statistics](https://github.com/pbstark/S157F17/blob/master/rabbits.ipynb), [Generating pseudo-random samples and permutations](https://github.com/pbstark/S157F17/blob/master/permute-sample.ipynb)
-1. Stark, P.B., and A. Saltelli, 2018. Cargo-cult Statistics and Scientific Crisis, _Significance_, _15_(4), 40--43. Preprint: https://www.significancemagazine.com/593
-1. Urban, M.C., 2015. Accelerating extinction risk from climate change, _Science_, _348_, Issue 6234, 571--573, DOI: 10.1126/science.aaa4984, http://science.sciencemag.org/content/348/6234/571.full
 
-
-__Foundations of Statistics__
-
-1. LeCam, L., 1977.  Note on metastatistics or 'An essay toward stating a problem in the doctrine of chances,' _Synthese_, _36_, 133-160.
-
+1. Stark, P.B., and A. Saltelli, 2018. Cargo-cult Statistics and Scientific Crisis, _Significance_, _15_(4), 40--43. https://www.significancemagazine.com/593
 
 __Agriculture, Ecology, and Health__
 
-LeCanne, C.E., and J.G. Lundgren, 2018.
-Regenerative agriculture: merging farming and natural resource conservation profitably,
-_PeerJ_ 6:e4428 https://doi.org/10.7717/peerj.4428
+1. Fagan, J., T. Traavik, and T. Bøhn, 2015. The Seralini affair: degeneration of Science to Re-Science?, _Environmental Sciences Europe_, _27_:19, DOI 10.1186/s12302-015-0049-2
+
+1. Karp, D.S., S. Gennet, C. Kilonzo, M. Partyka, N. Chaumont, E.R. Atwill, and C. Kremen, 2015.  Comanaging fresh produce for nature conservation and food safety, _PNAS_, _112_ (35) 11126-11131. https://doi.org/10.1073/pnas.1508435112
+
+1. LeCanne, C.E., and J.G. Lundgren, 2018. Regenerative agriculture: merging farming and natural resource conservation profitably, _PeerJ_ 6:e4428 https://doi.org/10.7717/peerj.4428
+
+1. Morabia, A., 2006. Pierre-Charles-Alexandre Louis and the evaluation of bloodletting, _J. Roy. Soc. Medicine_, _99_, 158--160. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1383766/pdf/0158.pdf
+
+1. Seralini, G.-E., E. Clair, R. Mesnage, S. Gress, N. Defarge, M. Malatesta, D. Hennequin, and J. Spiroux de Vendômois, 2014. Republished study: long-term toxicity of a Roundup herbicide and a Roundup-tolerant genetically modified maize, _Environmental Sciences Europe_, _26_:14, http://www.enveurope.com/content/26/1/14 
 
 __Earthquake probabilities__
 
-USGS 2008 Bay Area Earthquake Probabilities.  
+1. USGS 2008 Bay Area Earthquake Probabilities.  
 http://earthquake.usgs.gov/regional/nca/ucerf/
 
-Stark, P.B. and D.A. Freedman, 2003. What is the Chance of an Earthquake? in
+1. Cornell, C.A., 1968. Engineering seismic risk analysis, _Bull. Seism. Soc. Am_, _58_, 1583--1606. 
+
+1. 1. Mulargia, F., P.B. Stark, and R.J. Geller, 2017. Why is probabilistic seismic hazard analysis (PSHA) still used? _Physics of the Earth and Planetary Interiors_, _264_, 63-75. https://doi.org/10.1016/j.pepi.2016.12.002
+
+1. Stark, P.B. and D.A. Freedman, 2003. What is the Chance of an Earthquake? in
 _Earthquake Science and Seismic Risk Reduction_, F. Mulargia and R.J. Geller, eds.,
-NATO Science Series IV: Earth and Environmental Sciences, v. 32, Kluwer, Dordrecht, The Netherlands, 201–213.  
-Preprint: http://www.stat.berkeley.edu/~stark/Preprints/611.pdf
+NATO Science Series IV: Earth and Environmental Sciences, v. 32, Kluwer, Dordrecht, The Netherlands, 201–213. Preprint: http://www.stat.berkeley.edu/~stark/Preprints/611.pdf
 
 __Impact of Climate Change__
 
-The American Climate Prospectus:  Economic Risks in the United States, 2014.
-Trevor Houser, Robert Kopp, Solomon Hsiang, Michael Delgado, Amir Jina, Kate Larsen,
-Michael Mastrandrea, Shashank Mohan, Robert Muir-Wood, DJ Rasmussen, James Rising, and Paul Wilson.  
-http://rhg.com/reports/climate-prospectus
+1. Houser, T., R. Kopp, S. Hsiang, M. Delgado, A. Jina, K. Larsen, M. Mastrandrea, S. Mohan, R. Muir-Wood, D.J. Rasmussen, J. Rising, and P. Wilson, 2014. The American Climate Prospectus:  Economic Risks in the United States, 2014. http://rhg.com/reports/climate-prospectus
 
-Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015.
-Climate Models as Economic Guides: Scientific Challenge or Quixotic Quest?, 
-_Issues in Science and Technology_,
-Spring 2015.  
-Reprint: http://www.stat.berkeley.edu/~stark/Preprints/saltelliEtal15.pdf
+1. Hsiang, S., R. Kopp, A. Jina, J. Rising, M. Delgado, S. Mohan, D.J. Rasmussen, R. Muir-Wood, P. Wilson, M. Oppenheimer, K. Larsen, and T. Houser, 2017. Estimating economic damage from climate change in the United States, _Science_, _356_, 1362-1369 DOI: 10.1126/science.aal4369
 
+1. Ranson, M., 2014. Crime, weather, and climate change, _Journal of Environmental Economics and Management_, _67_(3), 274-302. https://doi.org/10.1016/j.jeem.2013.11.008
+
+1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic Guides: Scientific Challenge or Quixotic Quest?, _Issues in Science and Technology_, Spring 2015. Reprint: http://www.stat.berkeley.edu/~stark/Preprints/saltelliEtal15.pdf
+
+1. Urban, M.C., 2015. Accelerating extinction risk from climate change, _Science_, _348_, Issue 6234, 571--573, DOI: 10.1126/science.aaa4984, http://science.sciencemag.org/content/348/6234/571.full
+
+
+https://proxy.eplanete.net/galleries/broceliande7/node/1584/1584/pathway
+
+__Reproducibility__
+
+1. J.B. Buckheit and D.L. Donoho, 1995. Wavelab and Reproducible Research, https://statweb.stanford.edu/~wavelab/Wavelab_850/wavelab.pdf
+
+1. [Implementing Reproducible Research](https://osf.io/s9tya), edited by V. Stodden, F. Leisch and R. Peng
+
+1. [The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences](https://www.practicereproducibleresearch.org) Kitzes, Turek and Deniz, eds.
+
+1. [Reproducibility: a Primer on Semantics and Implications for Research](https://www.rti.org/sites/default/files/resources/18127052_Reproducibility_Primer.pdf) 
+
+1. Stark, P.B., 2018. No Reproducibility Without Preproducibility, _Nature_, _557_, p613. https://www.nature.com/magazine-assets/d41586-018-05256-0/d41586-018-05256-0.pdf 
+doi: 10.1038/d41586-018-05256-0
+
+1. Stark, P.B., 2017. [Preface](https://www.practicereproducibleresearch.org/core-chapters/0-preface.html) to _The Practice of Reproducible Research_, J. Kitzes, D. Turek, and F. Deniz, eds., University of California Press, Berkeley
 
