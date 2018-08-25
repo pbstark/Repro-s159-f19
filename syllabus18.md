@@ -4,7 +4,7 @@
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
 ##### Office: 403 Evans Hall. Office hours: TBA
 
-##### This version: 21 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
+##### This version: 23 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
@@ -33,7 +33,7 @@ Docker; LaTeX,
 Markdown, pandoc)
 
 ### Format and assessment
-+ 3 hours of lecture and 2 hours of lab per week
++ 3 hours of lecture and 2 hours of lab per week (bCourses will have screencasts of lectures)
 + approximately 5 "small" individual assignments (40% of grade)
 + 2 larger projects (30% of grade) 
 + a group term project (30% of grade)
@@ -43,7 +43,7 @@ Markdown, pandoc)
 
 ### Graduate Student Instructor
 + Mitch Negus, mitchell_negus@b.e
-+ Office hours TBA
++ Office hours 10-12 Tuesday, Thursday, 444 Evans Hall
 
 
 _Submitting assignments:_ Written assignments will be submitted using pull requests; details
@@ -83,6 +83,12 @@ benefit from their support, please apply online at dsp.berkeley.edu
 
 ## Resources
 
++ Computing resources
+    - We will be using Jupyter notebooks. You can use a hosted notebook at https://datahub.berkeley.edu/ or install Jupyter on your own device. The datahub.berkeley.edu server will have all the packages you need pre-installed. In contrast, if you use the Anaconda distribution, you will need to install some extra things, such as the permute and cryptorandom packages.
+    - We will use the campus github server, github.berkeley.edu
+    - The class notes and other materials are available at https://github.berkeley.edu/pbstark/S159-f18
+    - Assignments should be submitted by pull request to https://github.berkeley.edu/stat-159-259-f18 (details to come)
+    
 + Git and git workflows
     - [Introduction to Git](https://github.com/berkeley-scf/tutorial-git-basics/blob/master/git-intro.md). This is based on the notes we used in this class, but has a fair amount of additional explanation and detail you may find useful through the semester.
     - [Immersion course](http://gitimmersion.com)
@@ -106,10 +112,11 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - [Effective Pandas](https://github.com/TomAugspurger/effective-pandas), a book by Tom Augspurger, core Pandas developer.
 
 + Docker
-    - to come...
+    - https://docs.docker.com/get-started/
+    - https://docker-curriculum.com/
 
 + LaTeX
-    - to come
+    - https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf
 
 + Markdown
     - https://daringfireball.net/projects/markdown/syntax
@@ -117,9 +124,10 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - https://www.markdownguide.org/getting-started/
     
 + Pandoc
-    - 
+    - https://pandoc.org/getting-started.html
+    - https://pandoc.org/MANUAL.pdf
     
-+ General computing tutorials
++ Miscellaneous computing tutorials
     - [Berkeley Statistical Computing Facility tutorials](http://statistics.berkeley.edu/computing/training/tutorials)
 
 
@@ -195,7 +203,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
 #### Assignment **Due 9/3, 11:59pm:** 
 1. Look at 
 [the data Morabia transcribed from P.C.A. Louis on bloodletting for pneumonia](http://www.epidemiology.ch/history/louis.htm) and read Morabia (2006). What do you think of the fact that data from 1828 are available?
-Reproduce the results Morabia cites:
+Reproduce the results Morabia cites; if you cannot reproduce them, say why:
 
 - 77 patients
 - 2 comparison groups of 41 and 36 patients
@@ -262,6 +270,22 @@ https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OC
 
 1. Stark, P.B., and A. Saltelli, 2018. Cargo-cult Statistics and Scientific Crisis, _Significance_, _15_(4), 40--43. https://www.significancemagazine.com/593
 
+__Evidence, Models, and Public Policy__
+
+1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic Guides: Scientific Challenge or Quixotic Quest?, _Issues in Science and Technology_, Spring 2015. Reprint: http://www.stat.berkeley.edu/~stark/Preprints/saltelliEtal15.pdf
+
+1. van der Sluijs, J.P., J.S. Risbey, and J.R. Ravetz, 2005. Uncertainty Assessment of Voc Emissions From Paint in the Netherlands Using the NUSAP System,
+ _Environmental Monitoring and Assessment_, _105_, 229–259. doi:10.1007/s10661-005-3697-7
+
+1. van der Sluijs, J.P., A.C. Petersen, P.H.M. Janssen, J.S. Risbey, and J.R. Ravetz, 2008. 
+Exploring the quality of evidence for complex and
+contested policy decisions, _Environmental Research Letters_, _3_, doi:10.1088/1748-9326/3/2/024008
+
+1. van der Sluijs, J.P., 2016. Numbers Running Wild, Chapter 5 _in_ _The Rightful Place of Science: Science on the Verge_, 
+A. Benessia, S. Funtowicz, M. Giampietro, Â.G. Pereira, J. Ravetz, A. Saltelli, R. Strand,
+J.P. van der Sluijs, eds., Consortium for Science, Policy & Outcomes, AZ & DC.
+http://www.andreasaltelli.eu/file/repository/Science_on_the_Verge_FINAL_.pdf
+
 __Agriculture, Ecology, and Health__
 
 1. Fagan, J., T. Traavik, and T. Bøhn, 2015. The Seralini affair: degeneration of Science to Re-Science?, _Environmental Sciences Europe_, _27_:19, DOI 10.1186/s12302-015-0049-2
@@ -295,12 +319,7 @@ __Impact of Climate Change__
 
 1. Ranson, M., 2014. Crime, weather, and climate change, _Journal of Environmental Economics and Management_, _67_(3), 274-302. https://doi.org/10.1016/j.jeem.2013.11.008
 
-1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic Guides: Scientific Challenge or Quixotic Quest?, _Issues in Science and Technology_, Spring 2015. Reprint: http://www.stat.berkeley.edu/~stark/Preprints/saltelliEtal15.pdf
-
 1. Urban, M.C., 2015. Accelerating extinction risk from climate change, _Science_, _348_, Issue 6234, 571--573, DOI: 10.1126/science.aaa4984, http://science.sciencemag.org/content/348/6234/571.full
-
-
-https://proxy.eplanete.net/galleries/broceliande7/node/1584/1584/pathway
 
 __Reproducibility__
 
@@ -312,8 +331,11 @@ __Reproducibility__
 
 1. [Reproducibility: a Primer on Semantics and Implications for Research](https://www.rti.org/sites/default/files/resources/18127052_Reproducibility_Primer.pdf) 
 
-1. Stark, P.B., 2018. No Reproducibility Without Preproducibility, _Nature_, _557_, p613. https://www.nature.com/magazine-assets/d41586-018-05256-0/d41586-018-05256-0.pdf 
+1. Stark, P.B., 2018. No Reproducibility Without Preproducibility, _Nature_, _557_, 613. https://www.nature.com/magazine-assets/d41586-018-05256-0/d41586-018-05256-0.pdf 
 doi: 10.1038/d41586-018-05256-0
 
 1. Stark, P.B., 2017. [Preface](https://www.practicereproducibleresearch.org/core-chapters/0-preface.html) to _The Practice of Reproducible Research_, J. Kitzes, D. Turek, and F. Deniz, eds., University of California Press, Berkeley
+
+1. Teytelman, L., 2018. No more excuses for non-reproducible methods, _Nature_, _560_, 411. 
+https://www.nature.com/articles/d41586-018-06008-w, doi: 10.1038/d41586-018-06008-w
 
