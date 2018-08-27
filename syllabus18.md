@@ -200,7 +200,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - automation
     - accountability
 
-#### Assignment **Due 9/3, 11:59pm:** 
+#### Assignment 1. **Due 9/3, 11:59pm:** 
 1. Look at 
 [the data Morabia transcribed from P.C.A. Louis on bloodletting for pneumonia](http://www.epidemiology.ch/history/louis.htm) and read Morabia (2006). What do you think of the fact that data from 1828 are available?
 Reproduce the results Morabia cites; if you cannot reproduce them, say why:
@@ -231,9 +231,20 @@ Which cannot?
 Does the methods section describe how they processed the data in adequate detail to
 reproduce the analyses? If not, what else would you need to know?
 
+#### Assignment 2. **Due 9/9, 11:59pm:** 
+1. Read Barba (2018), Buckheit and Donoho (1995), Rokem et al. (2018), Stark (2018).
+Explain in your own words different senses of the terms "reproducible," "replicable", 
+and "repeatable."
+In your own words, explain why these concepts are important for science and society.
+Do you think there's a reasonable case for introducing a new term, such as "preproducible"
+(not necessarily that word, but a new term)? 
+Why or why not?
+What would you propose as a solution to the problem that different disciplines
+use "reproducible," "replicable," and "repeatable" to mean different things?
+There's no length restrictions for this assignment, but I would expect it to take
+about 2 pages to do a good but concise job.
 
 ## Collected Reading List:
-
 
 __Foundations; Statistical Models__
 
@@ -305,7 +316,7 @@ http://earthquake.usgs.gov/regional/nca/ucerf/
 
 1. Cornell, C.A., 1968. Engineering seismic risk analysis, _Bull. Seism. Soc. Am_, _58_, 1583--1606. 
 
-1. 1. Mulargia, F., P.B. Stark, and R.J. Geller, 2017. Why is probabilistic seismic hazard analysis (PSHA) still used? _Physics of the Earth and Planetary Interiors_, _264_, 63-75. https://doi.org/10.1016/j.pepi.2016.12.002
+1. Mulargia, F., P.B. Stark, and R.J. Geller, 2017. Why is probabilistic seismic hazard analysis (PSHA) still used? _Physics of the Earth and Planetary Interiors_, _264_, 63-75. https://doi.org/10.1016/j.pepi.2016.12.002
 
 1. Stark, P.B. and D.A. Freedman, 2003. What is the Chance of an Earthquake? in
 _Earthquake Science and Seismic Risk Reduction_, F. Mulargia and R.J. Geller, eds.,
@@ -321,7 +332,7 @@ __Impact of Climate Change__
 
 1. Urban, M.C., 2015. Accelerating extinction risk from climate change, _Science_, _348_, Issue 6234, 571--573, DOI: 10.1126/science.aaa4984, http://science.sciencemag.org/content/348/6234/571.full
 
-__Reproducibility__
+__Reproducibility and Scientific Method__
 
 1. Barba, L., 2016. The hard road to reproducibility, _Science_, _354_, 142. doi 10.1126/science.354.6308.142
 
@@ -336,6 +347,13 @@ __Reproducibility__
 1. [The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences](https://www.practicereproducibleresearch.org) Kitzes, Turek and Deniz, eds.
 
 1. [Reproducibility: a Primer on Semantics and Implications for Research](https://www.rti.org/sites/default/files/resources/18127052_Reproducibility_Primer.pdf) 
+
+1. Rokem, A., B. Marwick, and V. Staneva, 2018. Assessing Reproducibility,
+in _The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences_,
+University of California Press. https://www.practicereproducibleresearch.org/core-chapters/2-assessment.html
+
+1. Schapin, and Schaffer, 1985. _Leviathan and the Air-Pump: Hobbes, Boyle, and the Experimental Life_,
+Princeton University Press, NJ ISBN 0-691-08393-2 
 
 1. Stark, P.B., 2018. No Reproducibility Without Preproducibility, _Nature_, _557_, 613. https://www.nature.com/magazine-assets/d41586-018-05256-0/d41586-018-05256-0.pdf 
 doi: 10.1038/d41586-018-05256-0
