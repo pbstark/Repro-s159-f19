@@ -323,6 +323,12 @@ __Impact of Climate Change__
 
 __Reproducibility__
 
+1. Barba, L., 2016. The hard road to reproducibility, _Science_, _354_, 142. doi 10.1126/science.354.6308.142
+
+1. Barba, L., 2016. Reproducibility Syllabus, http://lorenabarba.com/blog/barbagroup-reproducibility-syllabus/
+
+1. Barba, L., 2018. Terminologies for Reproducible Research, https://arxiv.org/abs/1802.03311
+
 1. J.B. Buckheit and D.L. Donoho, 1995. Wavelab and Reproducible Research, https://statweb.stanford.edu/~wavelab/Wavelab_850/wavelab.pdf
 
 1. [Implementing Reproducible Research](https://osf.io/s9tya), edited by V. Stodden, F. Leisch and R. Peng
@@ -338,4 +344,10 @@ doi: 10.1038/d41586-018-05256-0
 
 1. Teytelman, L., 2018. No more excuses for non-reproducible methods, _Nature_, _560_, 411. 
 https://www.nature.com/articles/d41586-018-06008-w, doi: 10.1038/d41586-018-06008-w
+
+__Weaponizing Reproducibility__
+
+1. Hakim, D. and E. Lipton, 2018.
+Pesticide Studies Won E.P.A.'s Trust, Until Trump's Team Scorned 'Secret Science', _New York Times_,
+26 August. https://www.nytimes.com/2018/08/24/business/epa-pesticides-studies-epidemiology.html
 
