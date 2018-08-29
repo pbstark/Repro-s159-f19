@@ -4,7 +4,7 @@
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
 ##### Office: 403 Evans Hall. Office hours: TBA
 
-##### This version: 23 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
+##### This version: 27 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
@@ -43,11 +43,15 @@ Markdown, pandoc)
 
 ### Graduate Student Instructor
 + Mitch Negus, mitchell_negus@b.e
-+ Office hours 10-12 Tuesday, Thursday, 444 Evans Hall
++ Office hours 10-12 Tuesdays and Thursdays, 444 Evans Hall
 
 
-_Submitting assignments:_ Written assignments will be submitted using pull requests; details
-to come.
+_Submitting assignments:_ Submit written assignments by making a pull request
+to your private repository within the git organization for the class,
+https://github.berkeley.edu/stat-159-259-f18.
+Use your CalNet credentials to access your private repository.
+Create a directory for each assignment labeled with the assignment number, e.g., "Assignment1" for
+the first assignment.
 
 + Text documents should be written in LaTeX or Markdown. A pdf and the source file should be submitted. Microsoft Word is not acceptable.
 + Code and analyses should be in python. All code should have accompanying unit tests. In some cases, Jupyter notebooks will be the appropriate thing to submit; in others (more extensive analyses), a collection of .py files will be more appropriate. For term projects, the "deliverable" will include a repository that includes code, data, analyses, unit tests, and coverage tests.
@@ -87,7 +91,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - We will be using Jupyter notebooks. You can use a hosted notebook at https://datahub.berkeley.edu/ or install Jupyter on your own device. The datahub.berkeley.edu server will have all the packages you need pre-installed. In contrast, if you use the Anaconda distribution, you will need to install some extra things, such as the permute and cryptorandom packages.
     - We will use the campus github server, github.berkeley.edu
     - The class notes and other materials are available at https://github.berkeley.edu/pbstark/S159-f18
-    - Assignments should be submitted by pull request to https://github.berkeley.edu/stat-159-259-f18 (details to come)
+    - Assignments should be submitted by pull request to your private repository within the class organization https://github.berkeley.edu/stat-159-259-f18
     
 + Git and git workflows
     - [Introduction to Git](https://github.com/berkeley-scf/tutorial-git-basics/blob/master/git-intro.md). This is based on the notes we used in this class, but has a fair amount of additional explanation and detail you may find useful through the semester.
@@ -244,6 +248,9 @@ use "reproducible," "replicable," and "repeatable" to mean different things?
 There's no length restrictions for this assignment, but I would expect it to take
 about 2 pages to do a good but concise job.
 
+#### Assignment 3. **Due 9/9, 11:59pm:** 
+1. Read Coughenour et al. (2017) and Goddard et al. (2015).
+
 ## Collected Reading List:
 
 __Foundations; Statistical Models__
@@ -308,6 +315,14 @@ __Agriculture, Ecology, and Health__
 1. Morabia, A., 2006. Pierre-Charles-Alexandre Louis and the evaluation of bloodletting, _J. Roy. Soc. Medicine_, _99_, 158--160. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1383766/pdf/0158.pdf
 
 1. Seralini, G.-E., E. Clair, R. Mesnage, S. Gress, N. Defarge, M. Malatesta, D. Hennequin, and J. Spiroux de Vendômois, 2014. Republished study: long-term toxicity of a Roundup herbicide and a Roundup-tolerant genetically modified maize, _Environmental Sciences Europe_, _26_:14, http://www.enveurope.com/content/26/1/14 
+
+__Pedestrians and Race__
+
+1. Coughenour, C., S. Clark, A. Singh, E. Claw, J. Abelar, and J. Huebnera, 2017. Examining racial bias as a potential factor in pedestrian crashes, _Accident Analysis and Prevention_, _98_, 96-100.
+http://dx.doi.org/10.1016/j.aap.2016.09.031
+
+1. Goddard, T., K.B. Kahn, and A. Adkins, 2015. Racial Bias in Driver Yielding Behavior at Crosswalks, _Transportation Research Part F: Traffic Psychology and Behaviour_, _33_, 1-6.
+http://dx.doi.org/10.1016/j.trf.2015.06.002
 
 __Earthquake probabilities__
 
