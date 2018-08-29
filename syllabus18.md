@@ -207,7 +207,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
 #### Assignment 1. **Due 9/3, 11:59pm:** 
 1. Look at 
 [the data Morabia transcribed from P.C.A. Louis on bloodletting for pneumonia](http://www.epidemiology.ch/history/louis.htm) and read Morabia (2006). What do you think of the fact that data from 1828 are available?
-Reproduce the results Morabia cites; if you cannot reproduce them, say why:
+Reproduce the results below (which Morabia cites); if you cannot reproduce them, say why:
 
 - 77 patients
 - 2 comparison groups of 41 and 36 patients
@@ -216,6 +216,7 @@ Reproduce the results Morabia cites; if you cannot reproduce them, say why:
 - duration of disease was an average of 3 days shorter in those who had been bled early compared with those who had been bled late
 - `three sevenths' (i.e., 44 %) of the patients who had been bled early died 
 - `only one fourth' (i.e., 25 %) of those bled late died  
+
 Is Louis's work an observational study or an experiment? 
 Do you think it amounts to a "natural experiment"?
 Why or why not? 
@@ -225,9 +226,6 @@ What would be the most natural "as-if" randomization to use in analyzing
 the data to address the hypotheses you formulated, if you were to consider 
 the study to be a natural experiment? 
 What are the controls? Is the experiment blind? Double-blind? 
-Explain how you might use the Neyman model to analyze the data. 
-Is the randomization assumption reasonable? 
-Why or why not? Is the non-interference assumption reasonable? Why or why not?
 
 1. Read Karp et al. (2015) and look at the data they provided in Data Dryad.
 Which figures and tables in the paper could, in principle, be reproduced from the data they provide?
