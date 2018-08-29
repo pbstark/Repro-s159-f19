@@ -248,8 +248,6 @@ use "reproducible," "replicable," and "repeatable" to mean different things?
 There's no length restrictions for this assignment, but I would expect it to take
 about 2 pages to do a good but concise job.
 
-#### Assignment 3. **Due 9/9, 11:59pm:** 
-1. Read Coughenour et al. (2017) and Goddard et al. (2015).
 
 ## Collected Reading List:
 
