@@ -225,7 +225,10 @@ What do you think the most important confounding factors would be, for those two
 What would be the most natural "as-if" randomization to use in analyzing 
 the data to address the hypotheses you formulated, if you were to consider 
 the study to be a natural experiment? 
-What are the controls? Is the experiment blind? Double-blind? 
+What are the controls? Is the experiment blind? Double-blind?
+(If you are unfamiliar with the notions of confounding, natural experiments, controls, blinding,
+etc., see
+the relevant chapters of [SticiGui](https://www.stat.berkeley.edu/~stark/SticiGui/Text/toc.htm)) 
 
 1. Read Karp et al. (2015) and look at the data they provided in Data Dryad.
 Which figures and tables in the paper could, in principle, be reproduced from the data they provide?
