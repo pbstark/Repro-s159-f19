@@ -4,7 +4,7 @@
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
 ##### Office: 403 Evans Hall. Office hours: TBA
 
-##### This version: 27 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
+##### This version: 31 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
@@ -361,6 +361,10 @@ __Impact of Climate Change__
 1. Urban, M.C., 2015. Accelerating extinction risk from climate change, _Science_, _348_, Issue 6234, 571--573, DOI: 10.1126/science.aaa4984, http://science.sciencemag.org/content/348/6234/571.full
 
 __Reproducibility and Scientific Method__
+
+1. Ball, P., 2018. High-profile journals put to reproducibility test,
+_Nature_, 27 August, https://www.nature.com/articles/d41586-018-06075-z, 
+doi: 10.1038/d41586-018-06075-z
 
 1. Barba, L., 2016. The hard road to reproducibility, _Science_, _354_, 142. doi 10.1126/science.354.6308.142
 
