@@ -228,7 +228,7 @@ the study to be a natural experiment?
 What are the controls? Is the experiment blind? Double-blind?
 (If you are unfamiliar with the notions of confounding, natural experiments, controls, blinding,
 etc., see
-the relevant chapters of [SticiGui](https://www.stat.berkeley.edu/~stark/SticiGui/Text/toc.htm)) 
+the relevant chapters of [SticiGui](https://www.stat.berkeley.edu/~stark/SticiGui/Text/toc.htm).) 
 
 1. Read Karp et al. (2015) and look at the data they provided in Data Dryad.
 Which figures and tables in the paper could, in principle, be reproduced from the data they provide?
@@ -248,6 +248,20 @@ What would you propose as a solution to the problem that different disciplines
 use "reproducible," "replicable," and "repeatable" to mean different things?
 There's no length restrictions for this assignment, but I would expect it to take
 about 2 pages to do a good but concise job.
+
+#### Assignment 3. **Due 9/23, 11:59pm:** 
+1. Read Silberzahn et al. (2018).
++ Sketch the assumptions involved in each analysis listed in Table 3.
++ Is there any analysis that does not rely on a model? If so, which?
++ For the analyses that rely on models, explain the models in your own words,
+to the extent that you can figure out what was done.
+    - What are the assumptions of the models?
+    - Do those assumptions make sense for this application?
+    - What assumptions are needed to justify causal inferences in this context?
+    - Is there reason to believe that the models are in fact response schedules? If so, what?
+    - Explain in detail in words what models used by teams 3, 6, 12, 13, 17, and 31 are assuming.
+    - Explain in words what "OR" and the confidence intervals mean in the tables.
+    - Which, if any, of the "confidence intervals" are actually confidence intervals? Why are the others not actually confidence intervals? 
 
 
 ## Collected Reading List:
