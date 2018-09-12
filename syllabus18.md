@@ -285,6 +285,9 @@ http://escholarship.org/uc/item/0zj8s368#page-1
 
 1. Freedman, D.A., R. Pisani, and R. Purves, 2007. _Statistics, 4th edition_, W.W. Norton, New York.
 
+1. Godlberg, D., 1991. What every computer scientist should know about floating-point arithmetic, 
+_ACM Computing Surveys_, _23_, 5--48.
+
 1. Klemes, V., 1989. The Improbable Probabilities of Extreme Floods and Droughts, in O. Starosolsky and O.M. Meldev (eds), _Hydrology and Disasters_, James and James, London, 43--51.  
 https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OCR.pdf
 
