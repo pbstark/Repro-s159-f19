@@ -53,8 +53,14 @@ Use your CalNet credentials to access your private repository.
 Create a directory for each assignment labeled with the assignment number, e.g., "Assignment1" for
 the first assignment.
 
-+ Text documents should be written in LaTeX or Markdown. A pdf and the source file should be submitted. Microsoft Word is not acceptable.
-+ Code and analyses should be in python. All code should have accompanying unit tests. In some cases, Jupyter notebooks will be the appropriate thing to submit; in others (more extensive analyses), a collection of .py files will be more appropriate. For term projects, the "deliverable" will include a repository that includes code, data, analyses, unit tests, and coverage tests.
++ Text documents should be written in LaTeX or Markdown. 
+A pdf and the source file should be submitted.
+Microsoft Word is not acceptable.
++ Code and analyses should be in python. All code should have accompanying unit tests. 
+In some cases, Jupyter notebooks will be the appropriate thing to submit;
+in others (more extensive analyses), a collection of .py files will be more appropriate.
+For term projects, the "deliverable" will include a repository that includes code, data,
+analyses, unit tests, and coverage tests.
 
 
 ### Code of conduct; attribution of work
@@ -135,11 +141,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - [Berkeley Statistical Computing Facility tutorials](http://statistics.berkeley.edu/computing/training/tutorials)
 
 
-## Topics by week 
-
-### Week 1
-
-#### Topics
+## Topics 
 
 + What is reproducibility?
     - Why is reproducibility an issue?
@@ -204,7 +206,50 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - automation
     - accountability
 
++ Case study: Karp et al., 2015
+	+ access to data
+	+ reproducing the main results from the data
+	+ regression models
+		- assumptions required to perform OLS
+		- assumptions required for OLS to be unbiased
+		- assumptions required to compute SE
+		- assumptions required for $\hat{\beta}/SE$ to have a t-distribution
+	+ interpreting P-values
+	    - what's the null hypothesis?
+	    - appropriateness of t-tests in regression
+	    - p-values from observational data: hypothetical randomness
+	+ permutation tests
+		- group invariances and exchangeability
+		- the Neyman "ticket" model
+		    + the strong null hypothesis and weak null hypotheses
+		- interference
+		    + when is non-interference a reasonable assumption?
+		- null hypotheses, tests, and test statistics
+		    + key restrictions
+		    + significance versus power
+		    + specific alternatives and omnibus alternatives
+		    + p-values versus fixed-level tests
+		- generating random permutations
+			- generating pseudo-random numbers and pseudo-random integers
+				+ LCGs, Mersenne Twister, cryptographic PRNGs
+			- shuffling algorithms
+			    + the cryptorandom library
+			- problems with R's algorithms for generating random integers and random samples
+		- confidence bounds for p-values by inverting binomial tests
+	+ from reproducibility to replicability, stability, and generalizability
+		- transforming data before regression: "Garden of forking paths"
+		- sensitivity of conclusions to transformations
+		- sensitivity of conclusions to individual data: "influential observations"
+		- testing before modeling and post-selection inference (POSI)
+		- why reporting everything you tried matters; pre-registration
+		
++ Sensitivity analysis and sensitivity auditing
+        
+        
 #### Assignment 1. **Due 9/3, 11:59pm:** 
+
+**Getting started reproducing research**
+
 1. Look at 
 [the data Morabia transcribed from P.C.A. Louis on bloodletting for pneumonia](http://www.epidemiology.ch/history/louis.htm) and read Morabia (2006). What do you think of the fact that data from 1828 are available?
 Reproduce the results below (which Morabia cites); if you cannot reproduce them, say why:
@@ -237,7 +282,10 @@ Does the methods section describe how they processed the data in adequate detail
 reproduce the analyses? If not, what else would you need to know?
 
 #### Assignment 2. **Due 9/9, 11:59pm:** 
-1. Read Barba (2018), Buckheit and Donoho (1995), Rokem et al. (2018), Stark (2018).
+
+**Terminology: Reproducibility, Replicability, Preproducibility, etc.**
+
+Read Barba (2018), Buckheit and Donoho (1995), Rokem et al. (2018), Stark (2018).
 Explain in your own words different senses of the terms "reproducible," "replicable", 
 and "repeatable."
 In your own words, explain why these concepts are important for science and society.
@@ -250,11 +298,17 @@ There's no length restrictions for this assignment, but I would expect it to tak
 about 2 pages to do a good but concise job.
 
 #### Assignment 3. **Due 9/23, 11:59pm:** 
-1. Read Silberzahn et al. (2018).
-+ Sketch the assumptions involved in each analysis listed in Table 3.
+
+**Cargo-Cult Statistics and "researcher degrees of freedom"**
+
+Read Gelman and Loken (2013) and Silberzahn et al. (2018).
++ How many of the co-authors in Silberzahn et al. are in Statistics departments?
++ Sketch the assumptions involved in each analysis listed in Table 3 of Silberzahn et al.
+If you need clues, see Freedman (_Statistical Models: Theory and Practice_, 2009).
+Berk and Freedman (2001) might also be helpful.
 + Is there any analysis that does not rely on a model? If so, which?
 + For the analyses that rely on models, explain the models in your own words,
-to the extent that you can figure out what was done.
+to the extent that you can figure out what was done:
     - What are the assumptions of the models?
     - Do those assumptions make sense for this application?
     - What assumptions are needed to justify causal inferences in this context?
@@ -262,7 +316,50 @@ to the extent that you can figure out what was done.
     - Explain in detail in words what models used by teams 3, 6, 12, 13, 17, and 31 are assuming.
     - Explain in words what "OR" and the confidence intervals mean in the tables.
     - Which, if any, of the "confidence intervals" are actually confidence intervals? Why are the others not actually confidence intervals? 
+ 
+#### Reading assignment, **finish before class on 9/24**
 
+Saltelli et al. (2015), van der Sluijs et al. (2005), van der Sluijs et al. (2008),
+van der Sluijs (2016)
+
+van der Sluijs and Saltelli will give guest lectures the week of 9/24.
+
+#### Assignment 4. **Due 10/7, 11:59pm:** 
+
+**Sensitivity Analysis, Sensitivity Auditing, and Public Policy**
+
+Read and Berk and Freedman (2001), van der Sluijs (2016), Urban (2015)
+
++ Urban reports, "Overall, 7.9% of species are predicted to become extinct from climate 
+change; (95% CIs, 6.2 and 9.8) (Fig 1)."
+    - Urban derives his estimate using "Bayesian meta-analysis"
+        + Explain what meta-analysis is, including the assumptions (see Berk and Freedman)
+        + If you can, state the additional assumptions of Bayesian meta-analysis (this might require research)
+        + If you can figure it out from the paper and supplemental materials, state the prior Urban uses
+    - Urban points out that there are several general approaches the underlying 131 studies use to estimate the number of species that will go extinct.
+Sketch how these work:
+        + Species-area relationships
+        + Expert opinion
+        + Species distribution models
+    - Recall that the taxonomy of life is Kingdom, Phylum, Class, Order, Family, Genus, Species. 
+There are about 1.9 million known species of eukaryotes (everything but bacteria), and it is estimated that there are 8.7 million in all.
+There are estimated to be from millions to trillions of species of bacteria (prokaryotes).
+        + Estimate the number of species included in the 131 studies Urban relied on (this might require research: explain how you get your estimate)
+        + Are those species a random sample of all known species? Of all species?
+        + What animal genus has the most species?
+            - Do any of the studies Urban relies on examine that genus? 
+        + What plant genus has the most species?
+            - Do any of the studies Urban relies on examine that genus?
+        + Do any of the studies Urban relies on consider bacterial species?
+        + What families does Urban's estimate consider? (do your best to figure this out--I don't expect you to read all 131 studies)
+    - What data go into Urban's estimate?
+    - What, if anything, is random in Urban's estimate?
+    - Is the estimate of 7.9% of species unbiased? Why or why not? 
+    - Is the range (6.2%, 9.8%) a confidence interval? Why or why not?
+    - Urban's estimate does not have a timeline: it's "climate change," not 
+"climate change over the next 50y," for instance. How does that make sense?
+    - List 5 potentially large sources of uncertainty that Urban did not consider or did not address adequately
+    - On balance, do you think the 7.9% ((6.2%, 9.8%) figures are reliable? Useful? Interpretable?
 
 ## Collected Reading List:
 
@@ -285,9 +382,6 @@ http://escholarship.org/uc/item/0zj8s368#page-1
 
 1. Freedman, D.A., R. Pisani, and R. Purves, 2007. _Statistics, 4th edition_, W.W. Norton, New York.
 
-1. Godlberg, D., 1991. What every computer scientist should know about floating-point arithmetic, 
-_ACM Computing Surveys_, _23_, 5--48.
-
 1. Klemes, V., 1989. The Improbable Probabilities of Extreme Floods and Droughts, in O. Starosolsky and O.M. Meldev (eds), _Hydrology and Disasters_, James and James, London, 43--51.  
 https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OCR.pdf
 
@@ -306,9 +400,12 @@ https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OC
 
 __Evidence, Models, and Public Policy__
 
-1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic Guides: Scientific Challenge or Quixotic Quest?, _Issues in Science and Technology_, Spring 2015. Reprint: http://www.stat.berkeley.edu/~stark/Preprints/saltelliEtal15.pdf
+1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic
+Guides: Scientific Challenge or Quixotic Quest?, _Issues in Science and Technology_,
+Spring 2015. Reprint: http://www.stat.berkeley.edu/~stark/Preprints/saltelliEtal15.pdf
 
-1. van der Sluijs, J.P., J.S. Risbey, and J.R. Ravetz, 2005. Uncertainty Assessment of Voc Emissions From Paint in the Netherlands Using the NUSAP System,
+1. van der Sluijs, J.P., J.S. Risbey, and J.R. Ravetz, 2005. Uncertainty Assessment of Voc
+Emissions From Paint in the Netherlands Using the NUSAP System,
  _Environmental Monitoring and Assessment_, _105_, 229–259. doi:10.1007/s10661-005-3697-7
 
 1. van der Sluijs, J.P., A.C. Petersen, P.H.M. Janssen, J.S. Risbey, and J.R. Ravetz, 2008. 
@@ -319,6 +416,13 @@ contested policy decisions, _Environmental Research Letters_, _3_, doi:10.1088/1
 A. Benessia, S. Funtowicz, M. Giampietro, Â.G. Pereira, J. Ravetz, A. Saltelli, R. Strand,
 J.P. van der Sluijs, eds., Consortium for Science, Policy & Outcomes, AZ & DC.
 http://www.andreasaltelli.eu/file/repository/Science_on_the_Verge_FINAL_.pdf
+
+__Foundations: Computation, Optimization__
+
+1. Godlberg, D., 1991. What every computer scientist should know about floating-point arithmetic, 
+_ACM Computing Surveys_, _23_, 5--48.
+
+1. Lawson, C.L. and R.J. Hanson, 1974. _Solving Least Squares Problems_, Prentice-Hall, NJ.
 
 __Agriculture, Ecology, and Health__
 
