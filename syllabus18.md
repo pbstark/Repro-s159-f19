@@ -242,9 +242,15 @@ benefit from their support, please apply online at dsp.berkeley.edu
 		- sensitivity of conclusions to individual data: "influential observations"
 		- testing before modeling and post-selection inference (POSI)
 		- why reporting everything you tried matters; pre-registration
-		
+
 + Sensitivity analysis and sensitivity auditing
         
++ Statistical models and response schedules
+    - Response schedules and "physics"
+    - Linear probability models
+    - Logit and probit models
+    - Poisson regression
+    
         
 #### Assignment 1. **Due 9/3, 11:59pm:** 
 
@@ -296,26 +302,6 @@ What would you propose as a solution to the problem that different disciplines
 use "reproducible," "replicable," and "repeatable" to mean different things?
 There's no length restrictions for this assignment, but I would expect it to take
 about 2 pages to do a good but concise job.
-
-#### Assignment 3. **Due 9/23, 11:59pm:** 
-
-**Cargo-Cult Statistics and "researcher degrees of freedom"**
-
-Read Gelman and Loken (2013) and Silberzahn et al. (2018).
-+ How many of the co-authors in Silberzahn et al. are in Statistics departments?
-+ Sketch the assumptions involved in each analysis listed in Table 3 of Silberzahn et al.
-If you need clues, see Freedman (_Statistical Models: Theory and Practice_, 2009).
-Berk and Freedman (2001) might also be helpful.
-+ Is there any analysis that does not rely on a model? If so, which?
-+ For the analyses that rely on models, explain the models in your own words,
-to the extent that you can figure out what was done:
-    - What are the assumptions of the models?
-    - Do those assumptions make sense for this application?
-    - What assumptions are needed to justify causal inferences in this context?
-    - Is there reason to believe that the models are in fact response schedules? If so, what?
-    - Explain in detail in words what models used by teams 3, 6, 12, 13, 17, and 31 are assuming.
-    - Explain in words what "OR" and the confidence intervals mean in the tables.
-    - Which, if any, of the "confidence intervals" are actually confidence intervals? Why are the others not actually confidence intervals? 
  
 #### Reading assignment, **finish before class on 9/24**
 
@@ -324,7 +310,7 @@ van der Sluijs (2016)
 
 van der Sluijs and Saltelli will give guest lectures the week of 9/24.
 
-#### Assignment 4. **Due 10/7, 11:59pm:** 
+#### Assignment 3. **Due 9/30, 11:59pm:** 
 
 **Sensitivity Analysis, Sensitivity Auditing, and Public Policy**
 
@@ -360,6 +346,29 @@ There are estimated to be from millions to trillions of species of bacteria (pro
 "climate change over the next 50y," for instance. How does that make sense?
     - List 5 potentially large sources of uncertainty that Urban did not consider or did not address adequately
     - On balance, do you think the 7.9% ((6.2%, 9.8%) figures are reliable? Useful? Interpretable?
+
+#### Assignment 4. **Due 10/7, 11:59pm:** 
+
+**Cargo-Cult Statistics and "researcher degrees of freedom"**
+
+Read Gelman and Loken (2013) and Silberzahn et al. (2018).
++ How many of the co-authors in Silberzahn et al. are in Statistics departments?
++ The basic question the teams are supposed to answer is "are soccer referees are more likely 
+to give red cards to dark-skin-toned players than to light-skin-toned players?" 
+    - Explain in your own words what "more likely" means here.
+    - Is there anything random going on? If so, what? What makes it random?
+    - What would "equally likely" look like in the real world?
+    - Is the question about individual referees, or referees in general?
++ For teams 1--6 and 12 (seven teams) in Silberzahn et al., explain the following:
+    - Does the analysis implicitly or explicitly involve a model? If it does:
+        - Describe the model
+        - List and explain the assumptions of the model
+        - Assess the evidence that the model is a response schedule
+        - Describe any goodness-of-fit tests the team used to check the adequacy of the model
+        - Explain in words what "OR" means for each of the models. 
+            + What is OR or what parameter does it estimate? 
+            + Are the confidence intervals really confidence intervals? Why or why not? 
+
 
 ## Collected Reading List:
 
@@ -398,6 +407,14 @@ https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OC
 
 1. Stark, P.B., and A. Saltelli, 2018. Cargo-cult Statistics and Scientific Crisis, _Significance_, _15_(4), 40--43. https://www.significancemagazine.com/593
 
+__Statistical methodology__
+
+1. Freedman, D.A., 2008. Randomization does not justify logistic regression, 
+_Statistical Science_, _23_ 237--249. DOI: 10.1214/08-STS262 https://arxiv.org/pdf/0808.3914.pdf
+
+1. Hastie, T., R. Tibshirani, and J. Friedman, 2009. _Elements of Statistical Learning: Data Mining, Inference, and Prediction.
+Second Edition_, Springer-Verlag, NY. https://web.stanford.edu/~hastie/Papers/ESLII.pdf
+
 __Evidence, Models, and Public Policy__
 
 1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic
@@ -419,7 +436,7 @@ http://www.andreasaltelli.eu/file/repository/Science_on_the_Verge_FINAL_.pdf
 
 __Foundations: Computation, Optimization__
 
-1. Godlberg, D., 1991. What every computer scientist should know about floating-point arithmetic, 
+1. Goldberg, D., 1991. What every computer scientist should know about floating-point arithmetic, 
 _ACM Computing Surveys_, _23_, 5--48.
 
 1. Lawson, C.L. and R.J. Hanson, 1974. _Solving Least Squares Problems_, Prentice-Hall, NJ.
