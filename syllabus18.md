@@ -1,3 +1,13 @@
+<!---
+Student requests on 9/19:
+start group projects
+intro to git
+more coding
+statistical success stories
+how to pick a model
+Bayesian approaches
+-->
+
 <!--- compile: pandoc syllabus18.md -o syllabus18.pdf --toc --toc-depth=4 -->
 ##### Statistics 159/259: Reproducible and Collaborative Statistical Data Science
 ##### [Philip B. Stark](http://www.stat.berkeley.edu/~stark), Department of Statistics, UC Berkeley
@@ -229,28 +239,31 @@ benefit from their support, please apply online at dsp.berkeley.edu
 		    + significance versus power
 		    + specific alternatives and omnibus alternatives
 		    + p-values versus fixed-level tests
-		- generating random permutations See [Stark 2017](https://www.stat.berkeley.edu/~stark/Seminars/prngCDAR17.slides.html)
-			- generating pseudo-random numbers and pseudo-random integers
-				+ LCGs, Mersenne Twister, cryptographic PRNGs
-			- shuffling algorithms
-			    + the [cryptorandom library](https://github.com/statlab/cryptorandom/tree/master/cryptorandom)
-			- problems with R's algorithms for generating random integers and random samples [Ottoboni & Stark](https://arxiv.org/abs/1809.06520)
+		- generating random permutations. See [Stark 2017](https://www.stat.berkeley.edu/~stark/Seminars/prngCDAR17.slides.html)
+			+ generating pseudo-random numbers and pseudo-random integers
+			+ LCGs, Mersenne Twister, cryptographic PRNGs
+			+ shuffling algorithms
+			+ the [cryptorandom library](https://github.com/statlab/cryptorandom/tree/master/cryptorandom)
+			+ problems with R's algorithms for generating random integers and random samples [Ottoboni & Stark](https://arxiv.org/abs/1809.06520)
 		- confidence bounds for p-values by inverting binomial tests See [Permute/utils binom_conf_interval](https://github.com/statlab/permute/blob/master/permute/utils.py)
 	+ from reproducibility to replicability, stability, and generalizability
-		- transforming data before regression: "Garden of forking paths" See [Gelman & Loken](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf)
+		- transforming data before regression: "Garden of forking paths." See [Gelman & Loken](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf)
 		- sensitivity of conclusions to transformations
 		- sensitivity of conclusions to individual data: "influential observations"
 		- testing before modeling and post-selection inference (POSI)
 		- why reporting everything you tried matters; pre-registration
+		    + [AllTrials.net](http://www.alltrials.net)
+		    + changing clinical endpoints. Example: [PACE trial for CFS/ME](http://www.virology.ws/wp-content/uploads/2016/09/preliminary-analysis.pdf)
 
 + Sensitivity analysis and sensitivity auditing
         
 + Statistical models and response schedules
-    - Response schedules and "physics" See [Freedman SMTP Ch6](./Lit/freedman09-SMTP-response-schedules.pdf)
+    - Response schedules and "physics." See [Freedman SMTP Ch6](./Lit/freedman09-SMTP-response-schedules.pdf)
     - Linear probability models
-    - Logit and probit models
+    - Logit and probit models 
     - Poisson regression
-    
+ 
++ Bayesian estimation and inference   
         
 #### Assignment 1. **Due 9/3, 11:59pm:** 
 
@@ -347,7 +360,39 @@ There are estimated to be from millions to trillions of species of bacteria (pro
     - List 5 potentially large sources of uncertainty that Urban did not consider or did not address adequately
     - On balance, do you think the 7.9% ((6.2%, 9.8%) figures are reliable? Useful? Interpretable?
 
-#### Assignment 4. **Due 10/7, 11:59pm:** 
+#### Assignment 4. **Due 9/30, 11:59pm:** 
+
+**Algorithms, unit tests, continuous integration**
+
+This assignment concerns the chi-square statistic for the "two-sample problem"
+for categorical data.
+
+The input is two lists, $x = (x_1, \ldots, x_n)$ and $y = (y_1, \ldots, y_m)$.
+Imagine concatenating the lists to get a new list $z = (z_1, \ldots, z_N)$ of length $N = n+m$.
+Let $\{u_k\}_{k=1}^K$ denote the unique values in $z$ and let $\pi_k$ denote the relative
+frequency of the value $u_k$ among the elements of $z$, that is,
+
+$$ \pi_k \equiv \frac{\#\{ z_j, j=1, \ldots, N : z_j = u_k \}}{N}.$$
+
+Let $E_k \equiv n \pi_k$ and let $O_k \equiv \#\{ x_j, j=1, \ldots, n : x_j = u_k \}$
+(that is, $O_k$ is the number of elements of $x$ that are equal to $u_k$).
+The chi-square statistic for these data for the two-sample problem is
+
+$$
+   \chi^2 = \sum_{k=1}^K \frac{(O_k - E_k)^2}{E_k}.
+$$
+
+Write three different python functions that (each) take as input $x$ and $y$ and return $\chi^2$.
+The functions should use different strategies and/or data structures to calculate $\chi^2$. 
+
+Write unit tests for the functions to ensure that they work correctly for arbitrary input
+lists $x$ and $y$.
+
+Configure github with Travis CI to automatically run the tests on your code when you
+make a pull request.
+
+
+#### Assignment 5. **Due 10/7, 11:59pm:** 
 
 **Cargo-Cult Statistics and "researcher degrees of freedom"**
 
