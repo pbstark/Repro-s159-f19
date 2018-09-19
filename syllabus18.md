@@ -4,7 +4,7 @@
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
 ##### Office: 403 Evans Hall. Office hours: TBA
 
-##### This version: 31 August 2018. Latest version: [here](http://www.stat.berkeley.edu/~stark/Teach/S159/syllabus18.pdf)
+##### This version: 19 September 2018. 
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
