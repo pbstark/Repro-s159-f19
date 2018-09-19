@@ -229,15 +229,15 @@ benefit from their support, please apply online at dsp.berkeley.edu
 		    + significance versus power
 		    + specific alternatives and omnibus alternatives
 		    + p-values versus fixed-level tests
-		- generating random permutations
+		- generating random permutations See [Stark 2017](https://www.stat.berkeley.edu/~stark/Seminars/prngCDAR17.slides.html)
 			- generating pseudo-random numbers and pseudo-random integers
 				+ LCGs, Mersenne Twister, cryptographic PRNGs
 			- shuffling algorithms
-			    + the cryptorandom library
-			- problems with R's algorithms for generating random integers and random samples
-		- confidence bounds for p-values by inverting binomial tests
+			    + the [cryptorandom library](https://github.com/statlab/cryptorandom/tree/master/cryptorandom)
+			- problems with R's algorithms for generating random integers and random samples [Ottoboni & Stark](https://arxiv.org/abs/1809.06520)
+		- confidence bounds for p-values by inverting binomial tests See [Permute/utils binom_conf_interval](https://github.com/statlab/permute/blob/master/permute/utils.py)
 	+ from reproducibility to replicability, stability, and generalizability
-		- transforming data before regression: "Garden of forking paths"
+		- transforming data before regression: "Garden of forking paths" See [Gelman & Loken](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf)
 		- sensitivity of conclusions to transformations
 		- sensitivity of conclusions to individual data: "influential observations"
 		- testing before modeling and post-selection inference (POSI)
@@ -246,7 +246,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
 + Sensitivity analysis and sensitivity auditing
         
 + Statistical models and response schedules
-    - Response schedules and "physics"
+    - Response schedules and "physics" See [Freedman SMTP Ch6](./Lit/freedman09-SMTP-response-schedules.pdf)
     - Linear probability models
     - Logit and probit models
     - Poisson regression
