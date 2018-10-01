@@ -14,7 +14,7 @@ Bayesian approaches
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
 ##### Office: 403 Evans Hall. Office hours: TBA
 
-##### This version: 19 September 2018. 
+##### This version: 30 September 2018. 
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
@@ -264,6 +264,8 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - Poisson regression
  
 + Bayesian estimation and inference   
+
+
         
 #### Assignment 1. **Due 9/3, 11:59pm:** 
 
@@ -460,6 +462,8 @@ _Statistical Science_, _23_ 237--249. DOI: 10.1214/08-STS262 https://arxiv.org/p
 1. Hastie, T., R. Tibshirani, and J. Friedman, 2009. _Elements of Statistical Learning: Data Mining, Inference, and Prediction.
 Second Edition_, Springer-Verlag, NY. https://web.stanford.edu/~hastie/Papers/ESLII.pdf
 
+1. McCullagh, P. and J.A. Nelder, 1983. _Generalized Linear Models_, 2nd edition, Chapman & Hall, NY.
+
 __Evidence, Models, and Public Policy__
 
 1. Saltelli, A., P.B. Stark, W. Becker, and P. Stano, 2015. Climate Models as Economic
@@ -485,6 +489,9 @@ __Foundations: Computation, Optimization__
 _ACM Computing Surveys_, _23_, 5--48.
 
 1. Lawson, C.L. and R.J. Hanson, 1974. _Solving Least Squares Problems_, Prentice-Hall, NJ.
+
+1. Ottoboni, K. and P.B. Stark, 2018. Random problems with R, ArXiV, https://arxiv.org/abs/1809.06520.
+also see https://stat.ethz.ch/pipermail/r-devel/2018-September/076817.html
 
 __Agriculture, Ecology, and Health__
 
