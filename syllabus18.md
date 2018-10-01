@@ -390,15 +390,13 @@ The functions should use different strategies and/or data structures to calculat
 Write unit tests for the functions to ensure that they work correctly for arbitrary input
 lists $x$ and $y$.
 
-Configure github with Travis CI to automatically run the tests on your code when you
-make a pull request.
-
 
 #### Assignment 5. **Due 10/7, 11:59pm:** 
 
 **Cargo-Cult Statistics and "researcher degrees of freedom"**
 
 Read Gelman and Loken (2013) and Silberzahn et al. (2018).
+
 + How many of the co-authors in Silberzahn et al. are in Statistics departments?
 + The basic question the teams are supposed to answer is "are soccer referees are more likely 
 to give red cards to dark-skin-toned players than to light-skin-toned players?" 
@@ -416,13 +414,15 @@ to give red cards to dark-skin-toned players than to light-skin-toned players?"
             + What is OR or what parameter does it estimate? 
             + Are the confidence intervals really confidence intervals? Why or why not? 
 
-
 ## Collected Reading List:
 
 __Foundations; Statistical Models__
 
 1. Feynman, R., 1974. CalTech Commencement Address,  
 http://calteches.library.caltech.edu/51/2/CargoCult.htm
+
+1. Freedman, D.A., and D. Lane, 1983. A Nonstochastic Interpretation of Reported Significance Levels,
+_Journal of Business & Economic Statistics_, _1_, 292-298.
 
 1. Freedman, D.A., 1995. Some issues in the foundations of statistics, _Foundations of Science_, _1_, 19--39. https://doi.org/10.1007/BF00208723
 
