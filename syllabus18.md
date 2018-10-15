@@ -418,6 +418,10 @@ to give red cards to dark-skin-toned players than to light-skin-toned players?"
             + What is OR or what parameter does it estimate? 
             + Are the confidence intervals really confidence intervals? Why or why not? 
 
+#### Reading assignment, **finish before class on 10/17** 
+In preparation for the guest lecture by Nate Johnson, read Seralini et al., 2014,
+and skim the comments [here](https://www.sciencedirect.com/science/article/pii/S0278691512005637).
+
 #### Assignment 6. **Due 10/21, 11:59pm:**
 
 This brief assignment (a little computation and a modest amount of thinking) illustrates 
