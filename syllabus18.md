@@ -1,8 +1,8 @@
 <!---
 Student requests on 9/19:
-start group projects
-intro to git
-more coding
+x start group projects
+x intro to git
+x more coding
 statistical success stories
 how to pick a model
 Bayesian approaches
@@ -12,9 +12,9 @@ Bayesian approaches
 ##### Statistics 159/259: Reproducible and Collaborative Statistical Data Science
 ##### [Philip B. Stark](http://www.stat.berkeley.edu/~stark), Department of Statistics, UC Berkeley
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
-##### Office: 403 Evans Hall. Office hours: TBA
+##### Office: 403 Evans Hall. Office hours: Mondays, 12:15-1:15pm
 
-##### This version: 30 September 2018. 
+##### This version: \today
 
 # Reproducible and Collaborative Statistical Data Science: Overview
 
@@ -25,11 +25,11 @@ the data in that work using other methods--reproducibly.
 Examples will be drawn from a variety of fields, including agriculture, health, and
 climate.
 
-There will be roughly five small assignments and several larger projects.
+There will be roughly six small assignments and six larger projects.
 Much of the work will be collaborative in groups of 4-5.
 You will be asked to review your own contributions and each others contributions
 to group projects.
-There will not be a final exam, but there will be final presentations of group work.
+There will not be a midterm or final exam, but there will be final presentations of group work.
 
 ## Administrativia
 
@@ -41,12 +41,16 @@ Python; Jupyter Notebooks; the Python "scientific stack" of
 numpy, scipy, matplotlib, and perhaps pandas and scikit; git; GitHub; Travis CI; 
 Docker; LaTeX,
 Markdown, pandoc)
++ Willingness to learn some statistical methodology by reading on one's own (materials and links
+will be provided, but not all topics required to do the homework will be covered in lecture)
 
 ### Format and assessment
 + 3 hours of lecture and 2 hours of lab per week (bCourses will have screencasts of lectures)
+    - lectures will focus on theory, applications, and philosophy of science
+    - section will focus on computing, software tools, workflow, and collaboration
 + approximately 5 "small" individual assignments (40% of grade)
-+ 2 larger projects (30% of grade) 
-+ a group term project (30% of grade)
++ approximately 2 larger individual assignments (30% of grade) 
++ a group term project, divided into approximately 5 deliverables, plus a final presentation (30% of grade)
 
 ### Office hours
 + Mondays 12:15-1:15, 403 Evans Hall
@@ -414,6 +418,120 @@ to give red cards to dark-skin-toned players than to light-skin-toned players?"
             + What is OR or what parameter does it estimate? 
             + Are the confidence intervals really confidence intervals? Why or why not? 
 
+#### Assignment 6. **Due 10/21, 11:59pm:**
+
+This brief assignment (a little computation and a modest amount of thinking) illustrates 
+the problem of selective inference by simulation. 
+Imagine that you are selecting variables to include in a regression model. 
+A common approach is to include the variable if the $t$-statistic of its estimated
+coefficient is "significant," that is, if the estimated value of the coefficient, divided by the
+estimated standard error of the estimate, is greater than the $1-\alpha$ quantile of 
+Student's $t$ distribution with the appropriate number of degrees of freedom.
+To keep things simple, we will pretend that the standard error of the coefficient is known
+(and is equal to one),
+rather than estimated, so instead of using Student's $t$ distribution we can use the 
+standard normal distribution. 
+
++ For each $\theta \in \{-3, -2.9, \ldots, -0.1, 0, 0.1, \ldots, 2.9, 3 \}$, simulate a
+draw $X_\theta$ from a $N(\theta, 1)$ distribution.
++ If the draw is "statistically significant at level 0.05," i.e., if $|X_\theta| \ge 1.96$,
+construct the usual 95% confidence interval for $\theta$ from the draw, i.e., $[X-1.96, X+1.96]$.
+If $|X| < 1.96, do not make a confidence interval.
+For each confidence interval, record whether it contains the value of $\theta$ used to generate $X$.
+Repeat until you have constructed 10,000 confidence intervals for each value of $\theta$.
++ Plot the fraction of the 10,000 confidence intervals for $\theta$ that contain $\theta$, 
+as a function of $\theta$.
+(I.e., plot the empirical coverage rate of the confidence intervals.)
++ Include unit tests for every function, as usual.
++ Explain why the plot looks the way it does.
++ Suppose you wanted to create a procedure that had at least 95% coverage probability, no
+matter what $\theta$ is. Sketch how you would have to modify the usual normal confidence interval.
+(Hint: consider asymmetric confidence intervals.
+Extra hint: see Benjamini, Y. and D. Yekutieli, 2005. False Discovery Rate-Adjusted Multiple Confidence Intervals for Selected Parameters, _Journal of the American Statistical Association, Theory
+and Methods_, _100_(469), DOI 10.1198/016214504000001907) 
+
+#### Assignment 7. **Due 10/28, 11:59pm:**
+
+This assignment is about "the Seralini affair," discussed in class, including the guest lecture
+by Nate Johnson. 
+There are two relevant readings in the class literature folder, the republished
+Seralini et al. (2014) paper itself, and a news item.
+Seralini et al. (2014) is an open-access publication, but they 
+did not publish their software, and they refused to give it to me (I asked 
+Dr. Seralini for it several times in summer, 2018, in preparation for
+this course).
+However, they did make some data available with their republished paper; it is in the
+class folder Data (seralini.xlsx).
+
++ Look at seralini.xlsx (in the class Data folder)
++ If you had the software Seralini et al. used, would those data allow you to reproduce 
+figures 4 and 6?
+
+#### Group Assignments about Ranson (2014) on Climate and Crime.
+
+Every student should make at least 4 commits and at least one pull request for each of these assignments.
+Every submission should include unit tests for all functionality (using nose or unittest); the
+coverage of the tests should be at least 99%.
+
+#### Group Assignment 1. **Due 10/21, 11:59pm:** 
+
++ Write, document, and test code that takes a collection of values at (lat, long) pairs (intended to
+represent weather stations) and finds the
+inverse-distance weighted average value to another given set of (lat, long) points (intended to represent
+grid points within a county). 
+This is to replicate Ranson's calculation of the daily temperature in a county.
+The code should so something sensible if any distance is zero.
+
+#### Group Assignment 2. **Due 10/28, 11:59pm:**
+
++ Construct a grid of (lat, long) points within Alameda county separated by approximately 5 miles.
+The first point should be at (37.905098, -122.272225), near Summit Reservoir.
++ Write code to identify all weather stations within $x$ miles of Alameda County
++ Identify all weather stations within 10 miles (_not_ Ranson's 50 miles) of Alameda county, and find the weighted average 
+distance from each station to the points in the county grid
+
+#### Group Assignment 3. **Due 11/4, 11:59pm:**
++ retrieve the weather data for the relevant time periods for stations within 5 miles of Alameda County
++ identify the stations that meet Ranson's criteria for inclusion in each year
++ calculate the "bias" adjustment for each weather station
++ bin the averaged weather data, aggregate it by month using the categories Ranson used
+
+#### Group Assignment 4. **Due 11/4, 11:59pm:** (yes, 2 assignments due 11/4)
++ split Alameda county into two pieces along the eastern edges of zipcodes 94552 and 94539,
+and repeat what you did in group assignments (2) and (3) for the two pieces separately
+
+#### Group Assignment 5. **Due 11/11, 11:59pm:**
+There are weather stations in Livermore and in Oakland.
++ bin the maximum temperature data, separately for the two stations, using the categories Ranson used
++ devise and implement a stratified permutation test for the hypothesis that the two cities have "the same weather."
+Formulate the hypothesis as a _two-sample problem_, i.e., ask whether differences (between the
+cities) in the number of days 
+each month in which the maximum temperature is in each bin could reasonably be attributed to chance,
+if the maximum temperatures had been a single population of numbers randomly split across the two cities.
+    - What did you stratify on? Why is that a good choice? Why stratify at all?
+    - Combine results across strata using Fisher's combining function
++ discuss what this means for Ranson's approach
+
+<!--- The following assignments are still tentative 
+#### Group Assignment 6. **Due 11/18, 11:59pm:**
++ fit the Poisson regression model to the data for all of Alameda County, and for the two pieces of 
+Alameda county separately. Fit the separate estimates simultaneously, including dummy variables for
+crime and weather for all of Alameda county
+
++ devise and perform a permutation test to check whether the two pieces of 
+Alameda county are consistent with a single model.
+    - explain the particular randomization you are using, its assumptions, and your justification for using it as the null hypothesis
+    - use a cryptographic quality PRNG to simulate random permutations
+    - find upper bounds on the permutation $P$-value by inverting Binomial tests
+
+#### Group Assignment 7. **Due 11/25, 11:59pm:**
++ devise and implement a goodness-of-fit test for the Poisson regression model
++ test the hypothesis that the Alameda county data arise from a Poisson regression model
++ test the hypotheses that implement the Poisson regression, including the relevant fixed effects
+
+-->
+
+
 ## Collected Reading List:
 
 __Foundations; Statistical Models__
@@ -450,7 +568,12 @@ https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OC
 
 1. Stark, P.B., 2016b. The value of P-values, _The American Statistician_, _70_, DOI:10.1080/00031305.2016.1154108
 
-1. Stark, P.B., 2017. [Mathematical Foundations](https://github.com/pbstark/S157F17/blob/master/math-foundations.ipynb), [Inequalities](https://github.com/pbstark/S157F17/blob/master/math-inequalities.ipynb), [Introduction to permutation tests](https://github.com/pbstark/S157F17/blob/master/permute-intro.ipynb), [Rabbits and Cargo-Cult Statistics](https://github.com/pbstark/S157F17/blob/master/rabbits.ipynb), [Generating pseudo-random samples and permutations](https://github.com/pbstark/S157F17/blob/master/permute-sample.ipynb)
+1. Stark, P.B., 2017. [Mathematical Foundations](https://github.com/pbstark/S157F17/blob/master/math-foundations.ipynb),
+[Inequalities](https://github.com/pbstark/S157F17/blob/master/math-inequalities.ipynb),
+[Statistical models](https://github.com/pbstark/S157F17/blob/master/models.ipynb),
+[Introduction to permutation tests](https://github.com/pbstark/S157F17/blob/master/permute-intro.ipynb),
+[Rabbits and Cargo-Cult Statistics](https://github.com/pbstark/S157F17/blob/master/rabbits.ipynb), 
+[Generating pseudo-random samples and permutations](https://github.com/pbstark/S157F17/blob/master/permute-sample.ipynb)
 
 1. Stark, P.B., and A. Saltelli, 2018. Cargo-cult Statistics and Scientific Crisis, _Significance_, _15_(4), 40--43. https://www.significancemagazine.com/593
 
