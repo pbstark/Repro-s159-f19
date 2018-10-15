@@ -460,8 +460,9 @@ Seralini et al. (2014) is an open-access publication, but they
 did not publish their software, and they refused to give it to me (I asked 
 Dr. Seralini for it several times in summer, 2018, in preparation for
 this course).
-However, they did make some data available with their republished paper; it is in the
-class folder Data (seralini.xlsx).
+However, they did make some data available with their republished paper
+(see "Electronic Supplements" [here](https://enveurope.springeropen.com/articles/10.1186/s12302-014-0014-5)); 
+the data on tumors and mortality are in the class folder Data (seralini.xlsx).
 
 + Look at seralini.xlsx (in the class Data folder)
 + If you had the software Seralini et al. used, would those data allow you to reproduce 
