@@ -75,6 +75,7 @@ In some cases, Jupyter notebooks will be the appropriate thing to submit;
 in others (more extensive analyses), a collection of .py files will be more appropriate.
 For term projects, the "deliverable" will include a repository that includes code, data,
 analyses, unit tests, and coverage tests.
++ Final written projects are due on the last day of final exams, 12/14.
 
 
 ### Code of conduct; attribution of work
@@ -266,10 +267,48 @@ benefit from their support, please apply online at dsp.berkeley.edu
     - Linear probability models
     - Logit and probit models 
     - Poisson regression
+    
++ [Goodness of fit tests](./Code/goodness_of_fit.ipynb)
+
++ [Bayesian and frequentist estimation and inference](./Code/bayes.ipynb)
+    - Foundational issues
+    - Interpretation of probability
+        + prior probabilities 
+    - Example problems
+        - Bounded normal mean
+        - Election auditing
+    - Abstract framework
+    - Types of uncertainty
+        + Epistemic and aleatory uncertainty
+        + constraints versus priors
+    - Bayesian and frequentist measures of uncertainty
+    - Duality between minimax and Bayes estimation
+
++ Stratified tests and Fisher's Combining Function
  
-+ Bayesian estimation and inference   
 
+## Best uses for Jupyter notebooks
 
++ Jupyter notebooks are a wonderful tool for exploratory data analysis, to present results
+and to provide a "narrative" analysis: quantitative storytelling, showing the steps of the
+analysis and explaining the underlying mathematics, science, etc.
+
++ Jupyter notebooks are not an ideal tool to develop a codebase for a project, to house production tools, 
+etc. Jupyter isn't suited to automated testing or continuous integration 
+(there's no tool for that in Jupyter, as far as I know). A software development project is generally
+easier to build and maintain if you separate tests from the code, in different files.
+
++ Jupyter isn't suitable for packaging/distributing code or for providing tools 
+to be imported into other analyses. For those purposes, you want python files.
+
++ Once you have built the software tools (and tests of those tools) you need for an analysis 
+project, running analyses using 
+those tools in a well documented Jupyter notebook that tells the story of what you did so 
+that others can reproduce it is a good use of the overall tool ecosystem.
+
+## Assignments
+
+### Individual Assignments
         
 #### Assignment 1. **Due 9/3, 11:59pm:** 
 
@@ -427,18 +466,29 @@ and skim the comments [here](https://www.sciencedirect.com/science/article/pii/S
 This brief assignment (a little computation and a modest amount of thinking) illustrates 
 the problem of selective inference by simulation. 
 Imagine that you are selecting variables to include in a regression model. 
-A common approach is to include the variable if the $t$-statistic of its estimated
-coefficient is "significant," that is, if the estimated value of the coefficient, divided by the
-estimated standard error of the estimate, is greater than the $1-\alpha$ quantile of 
-Student's $t$ distribution with the appropriate number of degrees of freedom.
+A common method for selecting which coefficients/variables/parameters to include in a 
+regression or other statistical model is to keep the variable if the estimated coefficient 
+$|\hat{\theta}|$ is "significant," i.e., if the t-statistic or z-statistic for the estimated 
+coefficient is large.  
+Having chosen which variables to keep using a method like that, analysts often then report 
+confidence intervals for the coefficients, as if they had not already used the data to 
+decide which variables to keep in the model. 
+This is called "selective inference," as described in the citations below. 
+Selective inference leads to problems with statistical reproducibility for many reasons. 
+This assignment highlights one of them: confidence intervals can be far less likely to 
+contain the true value of the parameter when you use the data to select which parameters to 
+report confidence intervals for.
+
 To keep things simple, we will pretend that the standard error of the coefficient is known
-(and is equal to one),
-rather than estimated, so instead of using Student's $t$ distribution we can use the 
-standard normal distribution. 
+(and is equal to one), rather than estimated, so instead of using Student's $t$ distribution 
+we can use the standard normal distribution. 
+In this exercise, $X$ plays the role of $\hat{\theta}$.
+You will simulate $X \sim N(\theta, 1)$; $X$ is then an unbiased estimate of $\theta$.
+
 
 + For each $\theta \in \{-3, -2.9, \ldots, -0.1, 0, 0.1, \ldots, 2.9, 3 \}$, simulate a
-draw $X_\theta$ from a $N(\theta, 1)$ distribution.
-+ If the draw is "statistically significant at level 0.05," i.e., if $|X_\theta| \ge 1.96$,
+draw $X \sim N(\theta, 1)$.
++ If the draw is "statistically significant at level 0.05," i.e., if $|X| \ge 1.96$,
 construct the usual 95% confidence interval for $\theta$ from the draw, i.e., $[X-1.96, X+1.96]$.
 If $|X| < 1.96, do not make a confidence interval.
 For each confidence interval, record whether it contains the value of $\theta$ used to generate $X$.
@@ -449,9 +499,15 @@ as a function of $\theta$.
 + Include unit tests for every function, as usual.
 + Explain why the plot looks the way it does.
 + Suppose you wanted to create a procedure that had at least 95% coverage probability, no
-matter what $\theta$ is. Sketch how you would have to modify the usual normal confidence interval.
+matter what $\theta$ is. 
+Sketch how you would have to modify the usual normal confidence interval.
+I don't expect you to work out the math, just explain heuristically how the confidence interval
+would have to behave. Would it be symmetric around $X$? Would it be longer or shorter than
+the standard interval? What other changes would you expect?
 (Hint: consider asymmetric confidence intervals.
-Extra hint: see Benjamini, Y. and D. Yekutieli, 2005. False Discovery Rate-Adjusted Multiple Confidence Intervals for Selected Parameters, _Journal of the American Statistical Association, Theory
+Extra hint: see Benjamini, Y. and D. Yekutieli, 2005. 
+False Discovery Rate-Adjusted Multiple Confidence Intervals for Selected Parameters, 
+_Journal of the American Statistical Association, Theory
 and Methods_, _100_(469), DOI 10.1198/016214504000001907) 
 
 #### Assignment 7. **Due 10/28, 11:59pm:**
@@ -472,28 +528,32 @@ the data on tumors and mortality are in the class folder Data (seralini.xlsx).
 + If you had the software Seralini et al. used, would those data allow you to reproduce 
 figures 4 and 6?
 
-#### Group Assignments about Ranson (2014) on Climate and Crime.
+### Group Assignments about Ranson (2014) on Climate and Crime.
 
 Every student should make at least 4 commits and at least one pull request for each of these assignments.
 Every submission should include unit tests for all functionality (using nose or unittest); the
 coverage of the tests should be at least 99%.
 
+The source we will use for the crime data is here:  https://www.openicpsr.org/openicpsr/project/100707/version/V7/view
+These data have already been cleaned (by Jacob Kaplan, a Ph.D. student in Criminology at U. Pennsylvania);
+his cleaning scripts are here: https://github.com/jacobkap/crime_data
+
 #### Group Assignment 1. **Due 10/21, 11:59pm:** 
 
 + Write, document, and test code that takes a collection of values at (lat, long) pairs (intended to
 represent weather stations) and finds the
-inverse-distance weighted average value to another given set of (lat, long) points (intended to represent
+inverse-distance-weighted average value to another given set of (lat, long) points (intended to represent
 grid points within a county). 
 This is to replicate Ranson's calculation of the daily temperature in a county.
 The code should so something sensible if any distance is zero.
 
-#### Group Assignment 2. **Due 10/28, 11:59pm:**
+#### Group Assignment 2. **Due 11/4, 11:59pm:**
 
 + Construct a grid of (lat, long) points within Alameda county separated by approximately 5 miles.
 The first point should be at (37.905098, -122.272225), near Summit Reservoir.
 + Write code to identify all weather stations within $x$ miles of Alameda County
 + Identify all weather stations within 10 miles (_not_ Ranson's 50 miles) of Alameda county, and find the weighted average 
-distance from each station to the points in the county grid
+inverse distance from each station to the points in the county grid
 
 #### Group Assignment 3. **Due 11/4, 11:59pm:**
 + retrieve the weather data for the relevant time periods for stations within 5 miles of Alameda County
@@ -501,11 +561,11 @@ distance from each station to the points in the county grid
 + calculate the "bias" adjustment for each weather station
 + bin the averaged weather data, aggregate it by month using the categories Ranson used
 
-#### Group Assignment 4. **Due 11/4, 11:59pm:** (yes, 2 assignments due 11/4)
+#### Group Assignment 4. **Due 11/4, 11:59pm:** (yes, 3 assignments due 11/4)
 + split Alameda county into two pieces along the eastern edges of zipcodes 94552 and 94539,
 and repeat what you did in group assignments (2) and (3) for the two pieces separately
 
-#### Group Assignment 5. **Due 11/11, 11:59pm:**
+#### Group Assignment 5. **Due 11/18, 11:59pm:**
 There are weather stations in Livermore and in Oakland.
 + bin the maximum temperature data, separately for the two stations, using the categories Ranson used
 + devise and implement a stratified permutation test for the hypothesis that the two cities have "the same weather."
@@ -517,7 +577,6 @@ if the maximum temperatures had been a single population of numbers randomly spl
     - Combine results across strata using Fisher's combining function
 + discuss what this means for Ranson's approach
 
-<!--- The following assignments are still tentative 
 #### Group Assignment 6. **Due 11/18, 11:59pm:**
 + fit the Poisson regression model to the data for all of Alameda County, and for the two pieces of 
 Alameda county separately. Fit the separate estimates simultaneously, including dummy variables for
@@ -529,6 +588,7 @@ Alameda county are consistent with a single model.
     - use a cryptographic quality PRNG to simulate random permutations
     - find upper bounds on the permutation $P$-value by inverting Binomial tests
 
+<!---
 #### Group Assignment 7. **Due 11/25, 11:59pm:**
 + devise and implement a goodness-of-fit test for the Poisson regression model
 + test the hypothesis that the Alameda county data arise from a Poisson regression model
