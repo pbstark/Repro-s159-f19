@@ -1,11 +1,7 @@
 <!---
-Student requests on 9/19:
-x start group projects
-x intro to git
-x more coding
 statistical success stories
 how to pick a model
-Bayesian approaches
+8p5bj7h
 -->
 
 <!--- compile: pandoc syllabus18.md -o syllabus18.pdf --toc --toc-depth=4 -->
@@ -552,8 +548,10 @@ The code should so something sensible if any distance is zero.
 + Construct a grid of (lat, long) points within Alameda county separated by approximately 5 miles.
 The first point should be at (37.905098, -122.272225), near Summit Reservoir.
 + Write code to identify all weather stations within $x$ miles of Alameda County
-+ Identify all weather stations within 10 miles (_not_ Ranson's 50 miles) of Alameda county, and find the weighted average 
-inverse distance from each station to the points in the county grid
++ Identify all weather stations within 5 miles (_not_ Ranson's 50 miles) of Alameda county, and find the weighted average 
+inverse distance from each station to the points in the county grid.
+Your code for finding the stations should take the distance range as an input parameter 
+(i.e., your code should let you find all stations within 10 miles or 50 miles, too).
 
 #### Group Assignment 3. **Due 11/4, 11:59pm:**
 + retrieve the weather data for the relevant time periods for stations within 5 miles of Alameda County
