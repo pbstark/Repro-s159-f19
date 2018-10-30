@@ -75,8 +75,7 @@ analyses, unit tests, and coverage tests.
 
 
 ### Code of conduct; attribution of work
-The high academic standard at the University of California, Berkeley, is reflected in each degree 
-awarded.
+The high academic standard at the University of California, Berkeley, is reflected in each degree awarded.
 Every student is expected to maintain this high standard by ensuring that all
 academic work reflects unique ideas or properly attributes the ideas to the original sources.
 
@@ -548,20 +547,27 @@ The code should so something sensible if any distance is zero.
 + Construct a grid of (lat, long) points within Alameda county separated by approximately 5 miles.
 The first point should be at (37.905098, -122.272225), near Summit Reservoir.
 + Write code to identify all weather stations within $x$ miles of Alameda County
-+ Identify all weather stations within 5 miles (_not_ Ranson's 50 miles) of Alameda county, and find the weighted average 
-inverse distance from each station to the points in the county grid.
++ Identify all weather stations within 10 miles (_not_ Ranson's 50 miles) of any of the grid points
+in Alameda county, and find the weighted average inverse distance from each station to the 
+points in the county grid.
 Your code for finding the stations should take the distance range as an input parameter 
-(i.e., your code should let you find all stations within 10 miles or 50 miles, too).
+(i.e., your code should let you find all stations within 5 miles or 50 miles, too).
 
 #### Group Assignment 3. **Due 11/4, 11:59pm:**
-+ retrieve the weather data for the relevant time periods for stations within 5 miles of Alameda County
++ retrieve the weather data for the relevant time periods for stations within 10 miles of any
+grid point in Alameda County
 + identify the stations that meet Ranson's criteria for inclusion in each year
-+ calculate the "bias" adjustment for each weather station
-+ bin the averaged weather data, aggregate it by month using the categories Ranson used
++ calculate the "bias" adjustment for each weather station and for the county
++ bin the averaged adjusted temperature data, aggregate it by month using the categories Ranson used
 
 #### Group Assignment 4. **Due 11/4, 11:59pm:** (yes, 3 assignments due 11/4)
-+ split Alameda county into two pieces along the eastern edges of zipcodes 94552 and 94539,
-and repeat what you did in group assignments (2) and (3) for the two pieces separately
++ split Alameda county into two pieces along the eastern edges of zipcodes 94552 and 94539.
+Consider all zipcodes within Alameda county that are in or west of either of those zipcodes to be
+West Alameda and all zipcodes in Alameda that are east of those two zipcodes to be East Alameda.
+Repeat what you did in group assignments (2) and (3) for East Alameda and West Alameda 
+separately (but using the same grid of points--the original gridpoints in Alameda that are in East Alameda
+form the grid for East Alameda, and the original gridpoints in Alameda that are in West Alameda
+form the grid for West Alameda).
 
 #### Group Assignment 5. **Due 11/18, 11:59pm:**
 There are weather stations in Livermore and in Oakland.
