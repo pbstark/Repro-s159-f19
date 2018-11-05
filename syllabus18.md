@@ -5,6 +5,14 @@ how to pick a model
 -->
 
 <!--- compile: pandoc syllabus18.md -o syllabus18.pdf --toc --toc-depth=4 -->
+
+---
+header-includes:
+  - \hypersetup{colorlinks=false,
+            allbordercolors={0 0 0},
+            pdfborderstyle={/S/U/W 1}}
+---
+
 ##### Statistics 159/259: Reproducible and Collaborative Statistical Data Science
 ##### [Philip B. Stark](http://www.stat.berkeley.edu/~stark), Department of Statistics, UC Berkeley
 ##### [www.stat.berkeley.edu/~stark](http://www.stat.berkeley.edu/~stark) pbstark@berkeley.edu @philipbstark
@@ -18,8 +26,8 @@ This course teaches reproducible and collaborative research techniques through
 applied statistics, including reproducing published work and re-analyzing
 the data in that work using other methods--reproducibly.
 
-Examples will be drawn from a variety of fields, including agriculture, health, and
-climate.
+Examples will be drawn from a variety of fields, including agriculture, health, 
+public policy, and climate.
 
 There will be roughly six small assignments and six larger projects.
 Much of the work will be collaborative in groups of 4-5.
@@ -255,7 +263,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
 		    + [AllTrials.net](http://www.alltrials.net)
 		    + changing clinical endpoints. Example: [PACE trial for CFS/ME](http://www.virology.ws/wp-content/uploads/2016/09/preliminary-analysis.pdf)
 
-+ Sensitivity analysis and sensitivity auditing
++ Sensitivity analysis and sensitivity auditing (guest lectures by Andrea Saltelli and Jeroen van der Sluijs)
         
 + Statistical models and response schedules
     - Response schedules and "physics." See [Freedman SMTP Ch6](./Lit/freedman09-SMTP-response-schedules.pdf)
@@ -278,8 +286,45 @@ benefit from their support, please apply online at dsp.berkeley.edu
         + constraints versus priors
     - Bayesian and frequentist measures of uncertainty
     - Duality between minimax and Bayes estimation
+    
++ Example: [Election audits](https://github.com/pbstark/S157F17/blob/master/audit.ipynb)
+    - The auditing challenge and [evidence-based elections](https://www.stat.berkeley.edu/~stark/Preprints/lhc18.pdf)
+    - Sequential tests
+        + [Wald's SPRT for Binomial $p$](https://github.com/pbstark/S157F17/blob/master/sprt.ipynb)
+        + [Wald's SPRT for dependent observations](https://github.com/pbstark/S157F17/blob/master/pSPRTnoReplacement.ipynb)
+    - Transparency, reproducibility, auditability, and evidence in elections
+        + public observation, public notice
+            - observation versus evidence
+        + data disclosure, "commitments"
+        + [selecting the seed as a public ritual](https://youtu.be/ysG4pFFmQ-E?t=960)
+        + source disclosure
+            - PRNG
+            - mapping from PRNG to sample
+            - risk calculations 
+            - escalation rule and (most importantly) stopping rule
+        + procedural complexity
+            - what can a single observer observe?
+            - what does the public have to trust to have trust in election outcomes?
+        + examples of disclosed tools
+            - [tools for ballot-level comparison audits](https://www.stat.berkeley.edu/~stark/Vote/auditTools.htm)
+            - [tools for ballot-polling audits](https://www.stat.berkeley.edu/~stark/Vote/ballotPollTools.htm)
+            - [SUITE](https://github.com/pbstark/CORLA18)
+            - [RLATool](https://github.com/FreeAndFair/ColoradoRLA) [new version](https://github.com/democracyworks/ColoradoRLA)
+    - Contrasting RLAs and Bayesian audits
+        + what question does the audit answer?
+            - this election, or a hypothetical population of elections generated from known distribution?
+        + whence the prior?
+        + when are Bayesian audits RLAs?
 
 + Stratified tests and Fisher's Combining Function
+    - why stratify?
+    - nuisance parameters
+    - combinations of independent $p$-values
+        + chi-square distribution for continuous $p$-values (under the null)
+        + stochastic dominance by chi-square when the distribution has atoms
+        + dependent tests and lockstep permutations
+    - intersection-union tests and union-intersection tests
+    - [SUITE](https://github.com/pbstark/CORLA18)
  
 
 ## Best uses for Jupyter notebooks
