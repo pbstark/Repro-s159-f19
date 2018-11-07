@@ -289,6 +289,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
     
 + Example: [Election audits](https://github.com/pbstark/S157F17/blob/master/audit.ipynb)
     - The auditing challenge and [evidence-based elections](https://www.stat.berkeley.edu/~stark/Preprints/lhc18.pdf)
+    - [Public evidence from secret ballots](https://arxiv.org/pdf/1707.08619.pdf)
     - Sequential tests
         + [Wald's SPRT for Binomial $p$](https://github.com/pbstark/S157F17/blob/master/sprt.ipynb)
         + [Wald's SPRT for dependent observations](https://github.com/pbstark/S157F17/blob/master/pSPRTnoReplacement.ipynb)
@@ -316,14 +317,15 @@ benefit from their support, please apply online at dsp.berkeley.edu
         + whence the prior?
         + when are Bayesian audits RLAs?
 
-+ Stratified tests and Fisher's Combining Function
-    - why stratify?
-    - nuisance parameters
++ [Stratified tests and Fisher's Combining Function](https://github.com/pbstark/S157F17/blob/master/combining-tests.ipynb)
+    - why stratify or combine tests?
+    - intersection-union tests and union-intersection tests
+    - combining functions
     - combinations of independent $p$-values
         + chi-square distribution for continuous $p$-values (under the null)
         + stochastic dominance by chi-square when the distribution has atoms
         + dependent tests and lockstep permutations
-    - intersection-union tests and union-intersection tests
+    - nuisance parameters
     - [SUITE](https://github.com/pbstark/CORLA18)
  
 
@@ -615,15 +617,17 @@ form the grid for East Alameda, and the original gridpoints in Alameda that are 
 form the grid for West Alameda).
 
 #### Group Assignment 5. **Due 11/18, 11:59pm:**
-There are weather stations in Livermore and in Oakland.
+Consider weather data from the HCN Berkeley station (ID: USC00040693) and the HCN Livermore station 
+(ID: USC00044997) for the time period covered by Ranson's work.
 + bin the maximum temperature data, separately for the two stations, using the categories Ranson used
 + devise and implement a stratified permutation test for the hypothesis that the two cities have "the same weather."
-Formulate the hypothesis as a _two-sample problem_, i.e., ask whether differences (between the
+Formulate the hypothesis as a generalized _two-sample problem_, i.e., ask whether differences (between the
 cities) in the number of days 
 each month in which the maximum temperature is in each bin could reasonably be attributed to chance,
 if the maximum temperatures had been a single population of numbers randomly split across the two cities.
     - What did you stratify on? Why is that a good choice? Why stratify at all?
     - Combine results across strata using Fisher's combining function
+        + Can you use the chi-square distribution to calibrate the test? Why or why not?
 + discuss what this means for Ranson's approach
 
 #### Group Assignment 6. **Due 11/18, 11:59pm:**
@@ -641,7 +645,7 @@ Alameda county are consistent with a single model.
 #### Group Assignment 7. **Due 11/25, 11:59pm:**
 + devise and implement a goodness-of-fit test for the Poisson regression model
 + test the hypothesis that the Alameda county data arise from a Poisson regression model
-+ test the hypotheses that implement the Poisson regression, including the relevant fixed effects
++ test the hypotheses that the Poisson regression, including the relevant fixed effects
 
 -->
 
