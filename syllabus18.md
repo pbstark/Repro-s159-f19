@@ -619,18 +619,23 @@ form the grid for West Alameda).
 #### Group Assignment 5. **Due 11/18, 11:59pm:**
 Consider weather data from the HCN Berkeley station (ID: USC00040693) and the HCN Livermore station 
 (ID: USC00044997) for the time period covered by Ranson's work.
+
 + bin the maximum temperature data, separately for the two stations, using the categories Ranson used
+
 + devise and implement a stratified permutation test for the hypothesis that the two cities have "the same weather."
 Formulate the hypothesis as a generalized _two-sample problem_, i.e., ask whether differences (between the
 cities) in the number of days 
 each month in which the maximum temperature is in each bin could reasonably be attributed to chance,
 if the maximum temperatures had been a single population of numbers randomly split across the two cities.
+
     - What did you stratify on? Why is that a good choice? Why stratify at all?
     - Combine results across strata using Fisher's combining function
-        + Can you use the chi-square distribution to calibrate the test? Why or why not?
+    - Can you use the chi-square distribution to calibrate the test? Why or why not?
+        
 + discuss what this means for Ranson's approach
 
 #### Group Assignment 6. **Due 11/18, 11:59pm:**
+
 + fit the Poisson regression model to the data for all of Alameda County, and for the two pieces of 
 Alameda county separately. Fit the separate estimates simultaneously, including dummy variables for
 crime and weather for all of Alameda county
