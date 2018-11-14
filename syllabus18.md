@@ -265,7 +265,7 @@ benefit from their support, please apply online at dsp.berkeley.edu
 
 + Sensitivity analysis and sensitivity auditing (guest lectures by Andrea Saltelli and Jeroen van der Sluijs)
         
-+ Statistical models and response schedules
++ [Statistical models and response schedules](https://github.com/pbstark/S157F17/blob/master/models.ipynb)
     - Response schedules and "physics." See [Freedman SMTP Ch6](./Lit/freedman09-SMTP-response-schedules.pdf)
     - Linear probability models
     - Logit and probit models 
@@ -646,6 +646,9 @@ Alameda county are consistent with a single model.
 + devise and implement a goodness-of-fit test for the Poisson regression model
 + test the hypothesis that the Alameda county data arise from a Poisson regression model
 + test the hypotheses that the Poisson regression, including the relevant fixed effects
+
+Include a Makefile in your final submission that runs necessary scripts and notebooks, generates PDFs from notebooks and other analysis documents, and optionally performs data acquisition and cleaning steps. Your Makefile should be able to perform all three of these steps independently or at once, depending on user input. Be sure that target dependencies are properly listed so that changing code or figures will only trigger the build steps necessary to modify your analysis.
+
 
 -->
 
