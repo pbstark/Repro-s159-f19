@@ -616,7 +616,7 @@ separately (but using the same grid of points--the original gridpoints in Alamed
 form the grid for East Alameda, and the original gridpoints in Alameda that are in West Alameda
 form the grid for West Alameda).
 
-#### Group Assignment 5. **Due 11/18, 11:59pm:**
+#### Group Assignment 5. **Due 11/25, 11:59pm:**
 Consider weather data from the HCN Berkeley station (ID: USC00040693) and the HCN Livermore station 
 (ID: USC00044997) for the time period covered by Ranson's work.
 
@@ -631,19 +631,30 @@ if the maximum temperatures had been a single population of numbers randomly spl
     - What did you stratify on? Why is that a good choice? Why stratify at all?
     - Combine results across strata using Fisher's combining function
     - Can you use the chi-square distribution to calibrate the test? Why or why not?
+    - Discuss how you could take into account simulation uncertainty in estimating the overall $P$-value
+    - **Hint.** `cryptorandom` has a function `getrandbits()` that returns $k$ bits that approximate IID Bernoulli variables with $p=1/2$. You can think of each bit as the outcome of a coin toss, producing 1 if the coin landed heads and 0 otherwise.
+To make your simulation efficient, you will need to write your code so that it vectorizes. In particular, you can use `getrandbits()` to get a coin toss for every day in the overall time period, at one go.
+If you toss a coin by calling `cryptorandom.random()` and comparing the result to 0.5, your code will run about 255 times slower than if you use `getrandbits()`, since then each "coin toss" involves generating 256 random bits, instead of 1 random bit).
+If you still can't get your code to run in a reasonable amount of time, it is OK to use Python's default PRNG instead of `cryptorandom()`.
         
-+ discuss what this means for Ranson's approach
++ discuss what your findings mean for Ranson's approach
 
-#### Group Assignment 6. **Due 11/18, 11:59pm:**
+#### Group Assignment 6. **Due 11/25, 11:59pm:**
 
 + fit the Poisson regression model to the data for all of Alameda County, and for the two pieces of 
 Alameda county separately. Fit the separate estimates simultaneously, including dummy variables for
-crime and weather for all of Alameda county
+all of Alameda county (treat Alameda County as a whole the way Ranson treated states; East and West Alameda are the two counties in the State of Alameda).
+
+    - **Hint.** If some covariate has the same value in both parts of Alameda in every month
+(e.g., the number of days with maximum temperature below 10F),
+do not include it in the model: the corresponding parameter is not identifiable, 
+and the estimation problem will be unstable.
+    - **Hint.** `statsmodels` has a GLM function similar to that of R, and has an R-style language for writing formulae
 
 + devise and perform a permutation test to check whether the two pieces of 
 Alameda county are consistent with a single model.
     - explain the particular randomization you are using, its assumptions, and your justification for using it as the null hypothesis
-    - use a cryptographic quality PRNG to simulate random permutations
+    - try using a cryptographic quality PRNG to simulate random permutations; if you run into computational bottlenecks, it is OK to use Python's default PRNG instead.
     - find upper bounds on the permutation $P$-value by inverting Binomial tests
 
 <!---
