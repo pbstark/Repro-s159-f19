@@ -616,7 +616,7 @@ separately (but using the same grid of points--the original gridpoints in Alamed
 form the grid for East Alameda, and the original gridpoints in Alameda that are in West Alameda
 form the grid for West Alameda).
 
-#### Group Assignment 5. **Due 11/25, 11:59pm:**
+#### Group Assignment 5. **Due 11/30, 11:59pm:**
 Consider weather data from the HCN Berkeley station (ID: USC00040693) and the HCN Livermore station 
 (ID: USC00044997) for the time period covered by Ranson's work.
 
@@ -631,15 +631,18 @@ if the maximum temperatures had been a single population of numbers randomly spl
     - What did you stratify on? Why is that a good choice? Why stratify at all?
     - Combine results across strata using Fisher's combining function
     - Can you use the chi-square distribution to calibrate the test? Why or why not?
-    - Discuss how you could take into account simulation uncertainty in estimating the overall $P$-value
+    - Discuss how to take into account simulation uncertainty in estimating the overall $P$-value
+    
     - **Hint.** `cryptorandom` has a function `getrandbits()` that returns $k$ bits that approximate IID Bernoulli variables with $p=1/2$. You can think of each bit as the outcome of a coin toss, producing 1 if the coin landed heads and 0 otherwise.
 To make your simulation efficient, you will need to write your code so that it vectorizes. In particular, you can use `getrandbits()` to get a coin toss for every day in the overall time period, at one go.
 If you toss a coin by calling `cryptorandom.random()` and comparing the result to 0.5, your code will run about 255 times slower than if you use `getrandbits()`, since then each "coin toss" involves generating 256 random bits, instead of 1 random bit).
 If you still can't get your code to run in a reasonable amount of time, it is OK to use Python's default PRNG instead of `cryptorandom()`.
+
+    - **Hint.** See [combining tests](https://github.com/pbstark/S157F17/blob/master/combining-tests.ipynb)
         
 + discuss what your findings mean for Ranson's approach
 
-#### Group Assignment 6. **Due 11/25, 11:59pm:**
+#### Group Assignment 6. **Due 11/30, 11:59pm:**
 
 + fit the Poisson regression model to the data for all of Alameda County, and for the two pieces of 
 Alameda county separately. Fit the separate estimates simultaneously, including dummy variables for
@@ -655,7 +658,24 @@ and the estimation problem will be unstable.
 Alameda county are consistent with a single model.
     - explain the particular randomization you are using, its assumptions, and your justification for using it as the null hypothesis
     - try using a cryptographic quality PRNG to simulate random permutations; if you run into computational bottlenecks, it is OK to use Python's default PRNG instead.
-    - find upper bounds on the permutation $P$-value by inverting Binomial tests
+
+    - **Hint.** One way to ask whether the relationship between weather and crime is different in the two parts of Alameda is to check whether fitting two separate models fits the crime data "surprisingly better" than if the relationship were the same everywhere. The complication is that fitting two models will always fit somewhat better than a single model, because there are more parameters. Consider some combined measure of the fit of the two models to their corresponding data, e.g., RMS error. That's the test statistic. Now, randomly split the data into two pieces. For instance, take the two sets of monthly binned weather data and crime data, and toss a fair coin to decide whether East Alameda gets its original data, or the data from West Alameda (West gets whichever East didn't get. The randomization needs to keep the weather and crime for a given month together, so we allocate each entire month of weather and crime data to one location or to the other.) Fit two models to these randomized data, and calculate the RMS error. Repeat many times. If the RMS error of the two models to the randomly assigned data is typically much larger than it is for the original data, that's evidence that the relationship between weather and crime is truly different in the two parts of the county. 
+
+#### Group presentation. **Due 12/7, 11:59pm:**
+
+Each group should submit a 10-12 minute video presentation covering their work on group assignments 1-6,
+and their reflections on the Ranson paper.
+The video presentation, together with the underlying GitHub repository (Python files, Jupyter notebooks, makefile, etc.) 
+are due Friday, 12/7. 
+
+The video should be submitted (through GitHub) in a format for which there are free players for Mac OS, 
+Windows, and Linux operating systems (not, e.g., WAV files). Camtasia is highly rated and offers a free 
+trial, but you are welcome to use any application you want to generate the video. 
+Production values are not critical, but please be sure that your visual aids 
+(plots, code, or whatever else you choose to show) are legible on screen, and that 
+the audio is good enough to be understood. 
+Every member of your team should have some screen time or narration time. 
+At a minimum, there should be voice over screenshare, but you are welcome to video yourselves, too.
 
 <!---
 #### Group Assignment 7. **Due 11/25, 11:59pm:**
@@ -711,6 +731,7 @@ https://www.itia.ntua.gr/en/getfile/1107/1/documents/1997_ImprobProbabilities_OC
 [Introduction to permutation tests](https://github.com/pbstark/S157F17/blob/master/permute-intro.ipynb),
 [Rabbits and Cargo-Cult Statistics](https://github.com/pbstark/S157F17/blob/master/rabbits.ipynb), 
 [Generating pseudo-random samples and permutations](https://github.com/pbstark/S157F17/blob/master/permute-sample.ipynb)
+[Combining tests](https://github.com/pbstark/S157F17/blob/master/combining-tests.ipynb)
 
 1. Stark, P.B., and A. Saltelli, 2018. Cargo-cult Statistics and Scientific Crisis, _Significance_, _15_(4), 40--43. https://www.significancemagazine.com/593
 
