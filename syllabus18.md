@@ -616,7 +616,7 @@ separately (but using the same grid of points--the original gridpoints in Alamed
 form the grid for East Alameda, and the original gridpoints in Alameda that are in West Alameda
 form the grid for West Alameda).
 
-#### Group Assignment 5. **Due 11/30, 11:59pm:**
+#### Group Assignment 5. **Due 12/2, 11:59pm:**
 Consider weather data from the HCN Berkeley station (ID: USC00040693) and the HCN Livermore station 
 (ID: USC00044997) for the time period covered by Ranson's work.
 
@@ -642,7 +642,7 @@ If you still can't get your code to run in a reasonable amount of time, it is OK
         
 + discuss what your findings mean for Ranson's approach
 
-#### Group Assignment 6. **Due 11/30, 11:59pm:**
+#### Group Assignment 6. **Due 12/2, 11:59pm:**
 
 + fit the Poisson regression model to the data for all of Alameda County, and for the two pieces of 
 Alameda county separately. Fit the separate estimates simultaneously, including dummy variables for
