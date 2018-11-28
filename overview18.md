@@ -179,4 +179,24 @@ header-includes:
             - MLE for Poisson regression
 
 + Sensitivity analysis and sensitivity auditing 
+    - Sensitivity analysis:
+        - General technique for assessing qualitative sensitivity to
+            - data pre-processing
+            - influential observations / outliers
+            - model parametrization
+            - values of external parameters
+            - estimation method
+            - etc.
+    - Sensitivity auditing
+        - circumspect consideration / cataloging of sources of uncertainty
+        - consideration of how the scientific question is framed; built-in assumptions
+        - data quality
+        - data and model provenance
+        - NUSAP
+    - Post-Normal Science
+        - "facts uncertain, values in dispute, stakes high, decisions urgent"
+        - distinction between theorists' tools and policy tools
+        - importance of asking the right question
+            + examples: neonicotinoids & bees, nanoparticles, nuclear waste disposal, climate change, etc.
+            
 
