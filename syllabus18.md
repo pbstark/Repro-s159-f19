@@ -837,6 +837,10 @@ doi: 10.1038/d41586-018-06075-z
 
 1. [Reproducibility: a Primer on Semantics and Implications for Research](https://www.rti.org/sites/default/files/resources/18127052_Reproducibility_Primer.pdf) 
 
+1. Mesnard, O., and L.A. Barba, 2017. Reproducible and replicable CFD: it's harder than you think,
+_IEEE/AIP Computing in Science and Engineering, 19_(4):44--55. 10.1109/MCSE.2017.3151254
+Preprint: arXiv:1605.04339
+
 1. Rokem, A., B. Marwick, and V. Staneva, 2018. Assessing Reproducibility,
 in _The Practice of Reproducible Research: Case Studies and Lessons from the Data-Intensive Sciences_,
 University of California Press. https://www.practicereproducibleresearch.org/core-chapters/2-assessment.html
