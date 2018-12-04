@@ -52,8 +52,7 @@ will be provided, but not all topics required to do the homework will be covered
 + 3 hours of lecture and 2 hours of lab per week (bCourses will have screencasts of lectures)
     - lectures will focus on theory, applications, and philosophy of science
     - section will focus on computing, software tools, workflow, and collaboration
-+ approximately 5 "small" individual assignments (40% of grade)
-+ approximately 2 larger individual assignments (30% of grade) 
++ approximately 7 individual assignments (70% of grade)
 + a group term project, divided into approximately 5 deliverables, plus a final presentation (30% of grade)
 
 ### Office hours
@@ -677,16 +676,19 @@ the audio is good enough to be understood.
 Every member of your team should have some screen time or narration time. 
 At a minimum, there should be voice over screenshare, but you are welcome to video yourselves, too.
 
-<!---
-#### Group Assignment 7. **Due 11/25, 11:59pm:**
-+ devise and implement a goodness-of-fit test for the Poisson regression model
-+ test the hypothesis that the Alameda county data arise from a Poisson regression model
-+ test the hypotheses that the Poisson regression, including the relevant fixed effects
-
 Include a Makefile in your final submission that runs necessary scripts and notebooks, generates PDFs from notebooks and other analysis documents, and optionally performs data acquisition and cleaning steps. Your Makefile should be able to perform all three of these steps independently or at once, depending on user input. Be sure that target dependencies are properly listed so that changing code or figures will only trigger the build steps necessary to modify your analysis.
 
+### Extra credit (group or individual). **Due 12/7, 11:59pm:**
 
--->
++ devise and implement a conservative goodness-of-fit test for the Poisson regression model. (_Conservative_ means the chance of a Type I error is less than or equal to $\alpha$, and never greater than $\alpha$.)
+    - does it make sense to use a stratified test? if so, what does it make sense to stratify on? how will you combine results across strata?
++ test the hypothesis that the data for all of Alameda county arise from the fitted Poisson regression model (note that this is giving the model an advantage, since you are using the fitted parameters); report the $p$-value
+
+As usual, everything should be documented, tested, scripted, and reproducible.
+
+This assignment is entirely optional. You don't have to submit it at all.
+If you do choose to do it, it can either be a group effort (if the group wants to take it on)
+or an individual submission, if you want to go it alone. 
 
 
 ## Collected Reading List:
