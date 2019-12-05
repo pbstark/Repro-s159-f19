@@ -1,9 +1,3 @@
-<!---
-statistical success stories
-how to pick a model
-8p5bj7h
--->
-
 <!--- compile: pandoc syllabus18.md -o syllabus18.pdf --toc --toc-depth=4 -->
 
 ---

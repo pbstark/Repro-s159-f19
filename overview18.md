@@ -84,13 +84,13 @@ header-includes:
 + confirmation bias
     
 + Foundational issues; misinterpretations of probability and uncertainty
-    - Interpretation of probability
+    - interpretation of probability
         + prior probabilities 
-    - Types of uncertainty
-        + Epistemic and aleatory uncertainty
+    - types of uncertainty
+        + epistemic and aleatory uncertainty
         + constraints versus priors
     - Bayesian and frequentist measures of uncertainty
-    - Duality between minimax and Bayes estimation
+    - duality between minimax and Bayes estimation
     - models versus response schedules
 
 + model mania
@@ -134,8 +134,8 @@ header-includes:
 
 + Multiple testing, multiplicity, multiplicity adjustments
     - Bonferroni's inequality
-    - Independence
-    - False discovery rate (not covered)
+    - independence
+    - False Discovery Rate (not covered)
 
 + The Neyman model for causal inference
     - potential outcomes
@@ -154,7 +154,7 @@ header-includes:
 
 + Goodness of fit tests
     - Kolmogorov-Smirnov
-    - Chi-square statistic
+    - chi-square statistic
         + asymptotic tests versus exact tests versus conservative tests
     - other tests
         
